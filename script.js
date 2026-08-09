@@ -37,4 +37,3 @@ if ('IntersectionObserver' in window) {
 
   sections.forEach((section) => observer.observe(section));
 }
-

@@ -353,4 +353,3 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
-
