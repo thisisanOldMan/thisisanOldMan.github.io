@@ -12,32 +12,33 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
+<body id="top" data-page="home">
   <a class="skip-link" href="#main">跳至主要內容</a>
-
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#about">賴績智 <span>Ji-Zhi Lai</span></a>
+      <a class="brand" href="index.html">賴績智 <span>Ji-Zhi Lai</span></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="履歷章節">
-        <a href="#about">關於我</a>
-        <a href="#skills">能力</a>
-        <a href="#projects">專案</a>
-        <a href="#research">論文</a>
-        <a href="#experience">經歷</a>
-        <a href="#competitions">競賽</a>
+      <nav id="site-nav" class="site-nav" aria-label="履歷分類">
+        <a href="index.html" data-page="home" aria-current="page">首頁</a>
+        <a href="skills.html" data-page="skills">核心能力</a>
+        <a href="projects.html" data-page="projects">專案成果</a>
+        <a href="thesis.html" data-page="thesis">碩士論文</a>
+        <a href="experience.html" data-page="experience">教學與經歷</a>
+        <a href="competitions.html" data-page="competitions">競賽與提案</a>
         <a class="pdf-link" href="resume.pdf" download>PDF 履歷</a>
       </nav>
     </div>
   </header>
-
   <main id="main">
     <section id="about" class="hero">
       <div class="container hero-grid">
         <div class="identity">
-          <h1>賴績智 <span>Ji-Zhi Lai</span></h1>
-          <p class="job-title">AI 應用與 Agent 系統工程師</p>
-          <p class="degree">淡江大學資訊工程學系<br>智慧計算與應用碩士（2026）</p>
+          <div class="identity-copy">
+            <h1>賴績智 <span>Ji-Zhi Lai</span></h1>
+            <p class="job-title">AI 應用與 Agent 系統工程師</p>
+            <p class="degree">淡江大學資訊工程學系<br>智慧計算與應用碩士（2026）<br><span>研究方向：多回合對話策略、LLM、AI Agent 與企業應用整合</span></p>
+          </div>
+          <img class="profile-photo" src="assets/profile-photo.png" alt="賴績智個人照" width="132" height="168">
         </div>
         <div class="hero-copy">
           <p>聚焦自然語言 AI 系統，擅長把企業問題轉換成可操作的 AI 流程。曾將長篇顧客對話整理為可持續更新的客戶輪廓、以 n8n 流程自動化工具串起行銷影片製作，並建立多代理人會議系統核心框架。</p>
@@ -52,137 +53,15 @@
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <section class="section home-directory" aria-labelledby="directory-title">
       <div class="container">
-        <div class="section-title"><p>01</p><h2>核心能力</h2></div>
-        <div class="skill-grid">
-          <article><h3>企業 AI 平台與應用架構</h3><p>能與非技術合作方釐清需求，把抽象業務問題拆成使用者操作、AI 判斷、知識查詢、人工確認與外部工具，再以大型語言模型（LLM）、知識檢索增強生成（RAG）及多代理人（Multi-Agent）規劃完整服務流程。</p></article>
-          <article><h3>非同步長任務與狀態控管</h3><p>針對影片生成與多代理人等耗時流程，採非同步等待、結果輪詢與狀態持久化；以任務識別碼追蹤進度，並規劃重試、失敗分支、續跑及人工介入，避免單一步驟異常使整條流程中斷。</p></article>
-          <article><h3>多使用者資料與權限隔離</h3><p>依功能需求串接系統介面（API）、資料庫、模型與外部工具；以使用者、批次與項目識別碼分流請求，搭配資料列權限控管，建立 Multi-Tenant（多租戶）服務的隔離基礎。</p></article>
-          <article><h3>RAG 品質、效能與成本優化</h3><p>依問題類型選擇關鍵字、語意或知識關聯查詢，證據不足時重新搜尋或補問條件；同時以測試記錄處理時間、模型費用及回答結果，作為檢索與流程調整依據。</p></article>
-        </div>
-        <p class="tool-note"><strong>工程工具：</strong>Docker（使用經驗）、Linux 基礎指令</p>
-      </div>
-    </section>
-
-    <section id="projects" class="section section-muted">
-      <div class="container">
-        <div class="section-title"><p>02</p><h2>核心專案</h2></div>
-
-        <article class="project-card">
-          <header><p>2025–2026｜企業合作</p><h3>東森購物｜大型語言模型（LLM）客戶輪廓（Persona）分析系統</h3></header>
-          <p class="project-lead">將原本散落在長篇客服與銷售對話中的顧客需求、偏好、消費習慣及互動變化，自動整理成可持續更新的客戶輪廓，讓客服與行銷人員不必逐篇閱讀，也能快速掌握顧客狀態。</p>
-          <p class="flow"><strong>使用流程</strong>　匯入客服／銷售對話 → AI 擷取並合併顧客資訊 → 取得客戶輪廓與 Excel 報表</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>以大型語言模型從對話擷取資訊，依 13 類、56 欄資料規格合併新舊內容並輸出 JSON／Excel；對模型輸出格式異常及呼叫頻率限制加入解析修復與重試。</p></div>
-            <div><h4>企業效益</h4><p>將單筆約 2 萬中文字的人工閱讀與整理轉為 30–50 秒的自動化處理，成本估算約 NT$2.20，建立客戶經營與行銷分析的資料基礎。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>設計客戶輪廓擷取演算法、欄位規格與增量更新邏輯，完成批次後端及 JSON／Excel 輸出；前端由團隊成員負責。</p></div>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <header><p>2025｜產學合作</p><h3>好奇兄弟雲端｜AI 行銷影片流程自動化平台</h3></header>
-          <p class="project-lead">商家透過 LINE 提交廣告素材，系統以自動化互動流程依序完成文案、旁白、字幕與影片生成，並支援預覽、修改及重新產生，降低中小型商家製作廣告影片的技術門檻與跨工具操作成本。</p>
-          <p class="flow"><strong>使用流程</strong>　LINE 提交商品素材 → AI 產生文案、旁白與影片 → 商家預覽、修改或重新生成 → 完成交付</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>以 n8n 串接 LINE、生成式 AI、文字轉語音與影片服務；長時間生成採非同步等待與結果輪詢，並以使用者、批次及商品狀態追蹤 processing／ready／failed，支援失敗重試、續跑及重新生成。</p></div>
-            <div><h4>企業效益</h4><p>把素材整理、內容生成、修改與交付整合為單一流程；以每月 20 支、每支原需 3–5 小時計，可涵蓋約 60–100 人時／月的製作流程。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>主導需求拆解、核心 n8n 工作流與狀態機設計；整合生成服務、等待／輪詢、錯誤分支、人工確認，以及資料列權限控管，讓不同使用者的素材與任務彼此隔離。</p></div>
-          </div>
-          <figure class="project-visual"><img src="assets/good-brothers-line-menu.png" alt="商家在 LINE 上操作 AI 行銷影片服務的功能選單" loading="lazy"><figcaption>LINE 操作介面：上傳商品圖片、補充說明、提交活動內容與查詢進度。</figcaption></figure>
-        </article>
-
-        <article class="project-card">
-          <header><p>2025｜研究型系統</p><h3>會議諸葛｜多代理人（Multi-Agent）智慧會議助理</h3></header>
-          <p class="project-lead">讓 AI 不只是被動記錄會議，而是由多個具不同職責的 AI 代理人共同理解討論內容、查找所需知識、提出工具建議並判斷是否發言；會後再保留逐字稿與待辦，成為可參與會議的協作成員。</p>
-          <p class="flow"><strong>使用流程</strong>　進行即時語音會議 → 多個 AI 代理人依職責理解與判斷 → 保存逐字稿、任務及追蹤資訊</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>採多代理人角色分工，搭配即時語音、對話記憶、RAG 知識檢索與工具呼叫；以音訊佇列維持回覆順序，透過非同步事件、連線狀態及錯誤處理避免語音與資料流程互相阻塞。</p></div>
-            <div><h4>企業效益</h4><p>將討論內容、知識查詢與會後任務串成同一資訊流程，降低資訊散落、重複整理與責任遺漏，並建立後續自動化基礎。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>建立多代理人核心框架，定義角色、共享對話狀態與協作介面；整合即時語音、逐字稿、Webhook 事件、任務狀態及會議資料持久化。</p></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="research" class="section">
-      <div class="container">
-        <div class="section-title"><p>03</p><h2>碩士論文</h2></div>
-        <article class="thesis-card">
-          <p class="kicker">COMPASS</p>
-          <h3>基於對話狀態轉移預測與對話路徑分析之說服式對話系統</h3>
-          <p class="english-title">Contrastive Outcome-guided Modeling of Path-Aware State Shifts for Persuasive Dialogue Systems</p>
-          <div class="thesis-grid">
-            <div><h4>研究問題</h4><p>讓對話 AI 不只判斷「下一句怎麼說」，還能評估採用某個策略後，整段對話會更接近成功或更可能失敗。</p></div>
-            <div><h4>研究方法</h4><p>根據對方的抗拒程度建立動態路徑圖，分別估計「推進目標」與「造成對話破局」的後續成本，再選擇下一步策略。</p></div>
-            <div><h4>研究結果</h4><p>兩資料集 × 兩種 LLM 後端的四個受控評估條件中，相較 ASTRO，成功對話平均回合數皆縮短；風險權重實驗成功率 69.3%→78.2%，顯性失敗 24→12。</p></div>
-            <div><h4>本人貢獻</h4><p>負責研究問題定義、COMPASS 方法與系統架構、模擬評估及結果分析。</p></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="additional-projects" class="section section-muted">
-      <div class="container">
-        <div class="section-title"><p>04</p><h2>延伸專案</h2></div>
-        <div class="compact-projects">
-          <article>
-            <p class="kicker">2026｜智慧旅遊產學提案</p>
-            <h3>AI 代理人驅動的知識檢索行程服務（Agentic RAG）</h3>
-            <p>旅客只需用日常語言說出想去的地點、時間、偏好與限制，系統便會主動補問缺少條件、搜尋旅遊知識與即時資訊，產生可持續修改的個人化行程。</p>
-            <p><strong>關鍵方法：</strong>以意圖辨識理解目的、以填槽補齊日期與偏好；結合關鍵字與語意的混合檢索取得資料，當證據不足或條件缺漏時，由 AI 代理人補問、切換來源或重新搜尋後再調整行程。</p>
-            <p><strong>企業效益：</strong>讓旅遊平台從固定條件搜尋升級為對話式規劃服務，減少使用者與客服反覆查找、比較及整理資訊的負擔。</p>
-            <p><strong>我的貢獻：</strong>負責意圖驅動的知識檢索、資料融合、回應生成及驗測架構。</p>
-          </article>
-          <article>
-            <p class="kicker">2025｜仁愛醫院合作研究</p>
-            <h3>肝癌存活模型評估</h3>
-            <p>為醫療研究建立可重複的肝癌存活風險分析流程，以相同標準比較傳統統計、集成與深度學習模型，並解釋哪些特徵可能影響判斷。</p>
-            <p><strong>關鍵方法：</strong>比較五類存活模型；以 C-index 衡量預測排序能力，並用 SHAP 說明各項特徵對模型判斷的影響。</p>
-            <p><strong>研究效益：</strong>協助研究團隊辨識資料、小樣本及模型限制，作為後續研究與外部驗證依據；不作臨床部署宣稱。</p>
-            <p><strong>我的貢獻：</strong>負責資料前處理、五類模型建置、驗證及結果分析。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="section-title"><p>05</p><h2>產業協作、學歷與教學</h2></div>
-        <div class="experience-grid">
-          <article><span>產業規格協作</span><h3>台鐵／世曦工程｜鐵道 AI 招標規範</h3><p>協助世曦工程將台鐵場域的語音辨識、專有名詞校正與技術文件問答需求，轉化為可供招標及廠商評選使用的功能與技術規格；依不同查詢情境規劃關鍵字搜尋、語意檢索與知識圖譜（建立資料關聯）等處理方式。</p></article>
-          <article><span>2024–2026</span><h3>淡江大學 資訊工程學系智慧計算與應用碩士</h3><p>研究方向包含多回合對話策略、LLM、AI Agent 與企業應用整合。</p></article>
-          <article><span>各一學期</span><h3>Python、C 程式設計課程助教</h3><p>批改作業、提供部分期中／期末考題並帶領助教課。</p></article>
-          <article><span>技術推廣</span><h3>n8n 營隊助教與生成式 AI 講者</h3><p>協助高中二日營隊完成工作流與 AI 工具整合；另進行生成式 AI 通識分享與示範。</p></article>
-        </div>
-        <div class="photo-stories" aria-label="教學與演講活動照片">
-          <section><h3>生成式 AI 通識分享</h3><div class="photo-grid"><figure><img src="assets/talk-generative-ai-01.jpg" alt="賴績智在教室進行生成式 AI 通識演講" loading="lazy"><figcaption>介紹生成式 AI 的應用情境與工具操作。</figcaption></figure><figure><img src="assets/talk-generative-ai-02.jpg" alt="生成式 AI 通識分享現場" loading="lazy"><figcaption>以實際案例向學生說明 AI 如何協助日常工作。</figcaption></figure></div></section>
-          <section><h3>程式與流程自動化教學</h3><div class="photo-grid"><figure><img src="assets/teaching-n8n-workshop.jpg" alt="n8n 流程自動化課程現場" loading="lazy"><figcaption>n8n AI Workflow 高中營隊實作與除錯指導。</figcaption></figure><figure><img src="assets/teaching-python-class.jpg" alt="Python 程式設計助教課現場" loading="lazy"><figcaption>Python 助教課：帶領程式練習並協助學生解題。</figcaption></figure></div></section>
-        </div>
-      </div>
-    </section>
-
-    <section id="competitions" class="section section-muted">
-      <div class="container">
-        <div class="section-title"><p>06</p><h2>競賽與提案</h2></div>
-        <p class="section-intro">碩士期間以 7 件跨領域題目反覆練習在賽事時程內釐清使用者問題、收斂可行範圍，並把自然語言 AI、知識檢索與流程自動化整理成可展示、可說明價值的解決方案。</p>
-        <div class="competition-groups">
-          <section><h3>生成式影音與婚宴 AI</h3><ul>
-            <li><strong>2025 中華電信數位創新應用大賽・學生組</strong><span>《連線幸福未來：即時問答與多風格影片生成雲端平台》參賽</span></li>
-            <li><strong>2025 中華電信數位創新應用大賽・學生組</strong><span>《生成式廣告導向的虛擬人商家行銷解決方案》參賽</span></li>
-            <li><strong>2025 第 30 屆大專校院資訊應用服務創新競賽・產學合作組</strong><span>《為婚宴新人減勞的 RAG 問答系統與多風格影片生成系統》參賽</span></li>
-            <li><strong>114 年度 AIGO 淬煉實戰盃・創新提案組</strong><span>《基於知識檢索與多風格影片生成的智慧婚禮系統》提案送件</span></li>
-          </ul></section>
-          <section><h3>智慧旅遊、行銷與教育</h3><ul>
-            <li><strong>2025 ITA 智慧旅遊程式創意提案競賽</strong><span>參賽</span></li>
-            <li><strong>2025 國泰人壽全國創意行銷提案暨圖文競賽・行銷提案組</strong><span>參賽</span></li>
-            <li><strong>2025 全國創意與智慧科技競賽</strong><span>《大學好夥伴 College Buddy》作品送件</span></li>
-          </ul></section>
-        </div>
-        <div class="certificate-gallery" aria-label="正式參賽證明">
-          <figure><a href="assets/certificate-cht-wedding.jpg" target="_blank" rel="noreferrer"><img src="assets/certificate-cht-wedding.jpg" alt="中華電信智慧創新應用大賽婚宴作品參賽證明" loading="lazy"></a><figcaption>中華電信智慧創新應用大賽｜婚宴 AI 作品參賽證明</figcaption></figure>
-          <figure><a href="assets/certificate-cht-virtual-human.jpg" target="_blank" rel="noreferrer"><img src="assets/certificate-cht-virtual-human.jpg" alt="中華電信智慧創新應用大賽虛擬人行銷作品參賽證明" loading="lazy"></a><figcaption>中華電信智慧創新應用大賽｜虛擬人行銷作品參賽證明</figcaption></figure>
-          <figure><a href="assets/certificate-ita-travel.jpg" target="_blank" rel="noreferrer"><img src="assets/certificate-ita-travel.jpg" alt="ITA 智慧旅遊程式創意提案競賽參賽證明" loading="lazy"></a><figcaption>ITA 智慧旅遊程式創意提案競賽｜參賽證明</figcaption></figure>
+        <div class="section-title"><p>01</p><h2 id="directory-title">履歷分類</h2></div>
+        <div class="page-link-grid">
+          <a href="skills.html"><span>01</span><h3>核心能力</h3><p>企業 AI 應用、非同步流程、資料隔離與 RAG 評估。</p></a>
+          <a href="projects.html"><span>02</span><h3>專案成果</h3><p>五個自然語言 AI 專案與台鐵規格協作。</p></a>
+          <a href="thesis.html"><span>03</span><h3>碩士論文</h3><p>COMPASS 對話路徑分析方法、成果與研究圖。</p></a>
+          <a href="experience.html"><span>04</span><h3>教學與經歷</h3><p>程式助教、AI 工作坊、演講與專題指導。</p></a>
+          <a href="competitions.html"><span>05</span><h3>競賽與提案</h3><p>七件跨域提案與四張正式參賽證明。</p></a>
         </div>
       </div>
     </section>
