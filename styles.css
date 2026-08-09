@@ -44,11 +44,6 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .contact-list { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 20px 0; font-size: 14px; }
 .contact-list a { color: var(--blue); }
 .primary-button { display: inline-block; border-radius: 4px; padding: 10px 17px; color: var(--white); background: var(--blue); font-weight: 600; }
-.evidence { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.evidence div { padding: 20px 24px; border-right: 1px solid var(--line); background: var(--soft); }
-.evidence strong { display: block; color: var(--blue); font-size: 21px; }
-.evidence span { color: var(--muted); font-size: 13px; }
-
 .section { padding: 66px 0; }
 .section-muted { background: var(--soft); }
 .section-title { display: grid; grid-template-columns: 42px 1fr; align-items: baseline; margin-bottom: 28px; padding-bottom: 12px; border-bottom: 2px solid var(--text); }
@@ -74,6 +69,9 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .project-grid > .wide { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
 .project-grid h4, .thesis-grid h4 { margin-bottom: 4px; color: var(--blue); font-size: 13px; }
 .project-grid p, .thesis-grid p { margin: 0; font-size: 14px; }
+.project-visual { margin: 0; padding: 20px 26px 24px; border-top: 1px solid var(--line); }
+.project-visual img { width: min(100%, 760px); max-height: 420px; display: block; margin-inline: auto; border: 1px solid var(--line); object-fit: contain; background: var(--white); }
+.project-visual figcaption { width: min(100%, 760px); margin: 7px auto 0; color: var(--muted); font-size: 12px; }
 
 .thesis-card { border-left: 4px solid var(--blue); padding: 6px 0 4px 24px; }
 .thesis-card h3 { margin-bottom: 4px; font-size: 24px; }
@@ -85,25 +83,30 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .compact-projects article { border: 1px solid var(--line); padding: 22px; background: var(--white); }
 .compact-projects h3 { margin-bottom: 10px; font-size: 20px; }
 .compact-projects p { margin-bottom: 10px; font-size: 14px; }
-.tech-line { margin-bottom: 0 !important; color: var(--blue); font-size: 13px !important; font-weight: 600; }
-.project-gallery { display: grid; grid-template-columns: 1.4fr .6fr; gap: 14px; margin-top: 20px; }
-.project-gallery figure { margin: 0; }
-.project-gallery img { width: 100%; height: 230px; display: block; border: 1px solid var(--line); object-fit: contain; background: var(--white); }
-.project-gallery figcaption { margin-top: 5px; color: var(--muted); font-size: 12px; }
 
 .experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .experience-grid article { padding: 20px 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .experience-grid span { color: var(--blue); font-size: 12px; font-weight: 700; }
 .experience-grid h3 { margin: 4px 0 6px; font-size: 17px; }
 .experience-grid p { margin: 0; color: var(--muted); font-size: 14px; }
+.photo-stories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 28px; }
+.photo-stories > section { min-width: 0; }
+.photo-stories h3 { margin-bottom: 10px; font-size: 17px; }
+.photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.photo-grid figure, .certificate-gallery figure { margin: 0; }
+.photo-grid img { width: 100%; aspect-ratio: 4 / 3; display: block; border: 1px solid var(--line); object-fit: cover; background: var(--soft); }
+.photo-grid figcaption, .certificate-gallery figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .competition-groups { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; }
+.section-intro { max-width: 900px; margin: -6px 0 24px; color: var(--muted); }
 .competition-groups h3 { margin-bottom: 10px; font-size: 17px; }
 .competition-groups ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .competition-groups li { padding: 13px 0; border-bottom: 1px solid var(--line); }
 .competition-groups strong, .competition-groups span { display: block; }
 .competition-groups strong { font-size: 14px; }
 .competition-groups span { margin-top: 2px; color: var(--muted); font-size: 13px; }
+.certificate-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.certificate-gallery img { width: 100%; aspect-ratio: 4 / 3; display: block; border: 1px solid var(--line); object-fit: contain; background: var(--white); }
 
 .contact-section { color: #dce6f4; background: var(--text); }
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; }
@@ -127,16 +130,19 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
   .hero { padding-top: 50px; }
   .hero-grid { padding-bottom: 34px; }
   .section { padding: 50px 0; }
-  .evidence, .skill-grid, .project-grid, .thesis-grid, .compact-projects, .experience-grid, .competition-groups, .contact-grid { grid-template-columns: 1fr; }
-  .evidence div { border-bottom: 1px solid var(--line); }
+  .skill-grid, .project-grid, .thesis-grid, .compact-projects, .experience-grid, .competition-groups, .contact-grid, .photo-stories, .certificate-gallery { grid-template-columns: 1fr; }
   .project-card header { padding: 21px 19px 0; }
   .project-lead, .flow { margin-inline: 19px; }
   .flow { line-height: 1.7; }
   .project-grid > div, .project-grid > div:nth-child(2n) { border-right: 0; }
   .thesis-card { padding-left: 16px; }
   .thesis-card h3 { font-size: 21px; }
-  .project-gallery { grid-template-columns: 1fr; }
-  .project-gallery img { height: auto; max-height: 280px; }
+  .photo-grid { grid-template-columns: 1fr 1fr; }
+  .project-visual { padding-inline: 19px; }
+}
+
+@media (max-width: 430px) {
+  .photo-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
