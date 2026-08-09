@@ -25,7 +25,7 @@
         <a href="thesis.html" data-page="thesis" aria-current="page">碩士論文</a>
         <a href="experience.html" data-page="experience">教學與經歷</a>
         <a href="competitions.html" data-page="competitions">競賽與提案</a>
-        <a class="pdf-link" href="resume.pdf" download>PDF 履歷</a>
+        <a class="pdf-link" href="賴績智_履歷_0963671837.pdf" download="賴績智_履歷_0963671837.pdf">PDF 履歷</a>
       </nav>
     </div>
   </header>
@@ -47,12 +47,12 @@
           <div class="thesis-grid">
             <div><h4>研究問題</h4><p>讓對話 AI 不只判斷「下一句怎麼說」，還能評估採用某個策略後，整段對話會更接近成功或更可能失敗。</p></div>
             <div><h4>研究方法</h4><p>先將對話歷史表示為對方抗拒狀態的機率分布，逐一預測每個候選策略可能造成的下一狀態與終止結果；再依資料支持度融合歷史轉移統計與語境模型，建立每輪更新的動態路徑圖。最後以成功／失敗雙終局回推有限視界的期望成本，並用風險權重在「推進目標」與「避免破局」之間選擇策略。</p></div>
-            <div><h4>研究成果</h4><p>COMPASS 在本研究固定資料與評估設定下，4 組成功對話平均回合數皆縮短。與 ASTRO（Automatic Strategy Optimization，ACL Findings 2025）公開結果並列參照時，4 組平均回合數低 19.8–53.8%，其中 3 組成功率高 23.4–57.3 個百分點；因外部方法的評估協定未必完全一致，此差異作相對參照，非同協定下的嚴格排名。</p></div>
-            <div><h4>貢獻</h4><p>① 將策略評估由單一回合提升為整段後續對話路徑，從全局角度選擇能帶來較佳長期結果的策略；② 在同一轉移圖中分離計算成功與失敗路徑成本，使系統能同時判斷候選策略是否更接近成功，以及是否遠離失敗。</p></div>
+            <div><h4>研究成果</h4><p>COMPASS 在本研究固定資料與評估設定下，4 組成功對話平均回合數皆縮短。以主表中提升幅度最大的一組 CraigslistBargain／GPT‑3.5 為例，相較 ASTRO（Automatic Strategy Optimization，ACL Findings 2025），成功率由 17.6% 提升至 74.86%，增加 57.26 個百分點；成功對話平均回合數由 6.89 輪降至 4.858 輪，減少 2.032 輪。</p></div>
+            <div><h4>貢獻</h4><ol class="thesis-contributions"><li>將策略評估由單一回合提升為整段後續對話路徑，從全局角度選擇能帶來較佳長期結果的策略。</li><li>在同一轉移圖中分離計算成功與失敗路徑成本，使系統能同時判斷候選策略是否更接近成功，以及是否遠離失敗。</li></ol></div>
           </div>
           <div class="thesis-figures" aria-label="COMPASS 對話路徑分析圖">
-            <figure><img src="assets/thesis-success-path.png" alt="COMPASS 成功對話狀態轉移與策略路徑圖" loading="lazy"><figcaption><strong>成功對話路徑圖</strong><span>綠色路徑呈現系統如何從初始狀態，依序選擇策略並通往成功終局。</span></figcaption></figure>
-            <figure><img src="assets/thesis-experience-path.png" alt="COMPASS 對話經驗路徑成本圖" loading="lazy"><figcaption><strong>經驗路徑圖</strong><span>以歷史狀態轉移與路徑成本，評估候選策略較可能通往成功或失敗。</span></figcaption></figure>
+            <figure><img src="assets/thesis-success-path.png" alt="COMPASS 成功對話狀態轉移與策略路徑圖"><figcaption><strong>成功對話路徑圖</strong><span>綠色路徑呈現系統如何從初始狀態，依序選擇策略並通往成功終局。</span></figcaption></figure>
+            <figure><img src="assets/thesis-experience-path.png" alt="COMPASS 對話經驗路徑成本圖"><figcaption><strong>經驗路徑圖</strong><span>以歷史狀態轉移與路徑成本，評估候選策略較可能通往成功或失敗。</span></figcaption></figure>
           </div>
         </article>
       </div>

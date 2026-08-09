@@ -86,6 +86,8 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .project-grid > div:nth-child(2n) { border-right: 0; }
 .project-grid > .wide { grid-column: 1 / -1; border-right: 0; border-bottom: 0; }
 .project-grid h4, .thesis-grid h4 { margin-bottom: 4px; color: var(--blue); font-size: 13px; }
+.thesis-contributions { margin: 0; padding-left: 1.35em; }
+.thesis-contributions li + li { margin-top: 7px; }
 .project-grid p, .thesis-grid p { margin: 0; font-size: 14px; }
 .project-visual { margin: 0; padding: 20px 26px 24px; border-top: 1px solid var(--line); }
 .project-visual img { width: min(100%, 760px); height: var(--media-height); display: block; margin-inline: auto; border: 1px solid var(--line); object-fit: contain; background: var(--white); }
@@ -117,19 +119,16 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .compact-projects h3 { margin-bottom: 10px; font-size: 20px; }
 .compact-projects p { margin-bottom: 10px; font-size: 14px; }
 
-.experience-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.experience-grid article { padding: 20px 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.experience-grid span { color: var(--blue); font-size: 12px; font-weight: 700; }
-.experience-grid h3 { margin: 4px 0 6px; font-size: 17px; }
-.experience-grid p { margin: 0; color: var(--muted); font-size: 14px; }
-.photo-stories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 28px; }
-.photo-stories > section { min-width: 0; }
-.photo-stories h3 { margin-bottom: 10px; font-size: 17px; }
+.teaching-stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+.teaching-story { min-width: 0; padding-top: 18px; border-top: 2px solid var(--blue); }
+.teaching-story header { min-height: 118px; }
+.teaching-story header span { color: var(--blue); font-size: 12px; font-weight: 700; }
+.teaching-story h3 { margin: 4px 0 7px; font-size: 18px; }
+.teaching-story header p { margin: 0; color: var(--muted); font-size: 14px; }
 .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.photo-grid figure, .single-photo figure, .certificate-gallery figure { margin: 0; }
-.photo-grid img, .single-photo img { width: 100%; height: var(--media-height); display: block; border: 1px solid var(--line); object-fit: cover; background: var(--soft); }
-.single-photo { display: grid; grid-template-columns: 1fr; }
-.photo-grid figcaption, .single-photo figcaption, .certificate-gallery figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.photo-grid figure, .certificate-gallery figure { margin: 0; }
+.photo-grid img { width: 100%; height: var(--media-height); display: block; border: 1px solid var(--line); object-fit: cover; background: var(--soft); }
+.photo-grid figcaption, .certificate-gallery figcaption { margin-top: 6px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .competition-groups { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; }
 .section-intro { max-width: 900px; margin: -6px 0 24px; color: var(--muted); }
@@ -168,7 +167,7 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
   .identity { grid-template-columns: minmax(0, 1fr) 112px; gap: 18px; }
   .profile-photo { width: 112px; height: 142px; }
   .section { padding: 50px 0; }
-  .skill-grid, .project-grid, .thesis-grid, .thesis-figures, .compact-projects, .experience-grid, .competition-groups, .contact-grid, .photo-stories, .certificate-gallery { grid-template-columns: 1fr; }
+  .skill-grid, .project-grid, .thesis-grid, .thesis-figures, .compact-projects, .teaching-stories, .competition-groups, .contact-grid, .certificate-gallery { grid-template-columns: 1fr; }
   .project-card header { padding: 21px 19px 0; }
   .project-lead, .flow { margin-inline: 19px; }
   .flow { line-height: 1.7; }
@@ -180,7 +179,8 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
   .project-media-grid { grid-template-columns: 1fr; padding: 18px 19px 20px; }
   .project-media-grid .project-visual img,
   .project-media-grid .project-visual video { height: 220px; }
-  .project-visual img, .project-visual video, .thesis-figures img, .photo-grid img, .single-photo img, .certificate-gallery img { height: 220px; }
+  .teaching-story header { min-height: 0; }
+  .project-visual img, .project-visual video, .thesis-figures img, .photo-grid img, .certificate-gallery img { height: 220px; }
 }
 
 @media (max-width: 430px) {
