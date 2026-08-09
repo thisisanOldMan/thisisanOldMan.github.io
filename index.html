@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="賴績智的 AI 應用系統、Multi-Agent、流程自動化與 LLM 專案履歷。">
+  <meta name="description" content="賴績智的 NLP、LLM、Multi-Agent、RAG 與流程自動化履歷。">
   <meta name="theme-color" content="#ffffff">
-  <title>賴績智 Ji-Zhi Lai｜對話式 AI 與 Agent 系統履歷</title>
+  <title>賴績智 Ji-Zhi Lai｜AI 應用與 Agent 系統工程師</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,17 +18,14 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#about">賴績智 <span>Ji-Zhi Lai</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
       <nav id="site-nav" class="site-nav" aria-label="履歷章節">
         <a href="#about">關於我</a>
-        <a href="#skills">經歷亮點</a>
-        <a href="#projects">代表專案</a>
-        <a href="#research">研究</a>
+        <a href="#skills">能力</a>
+        <a href="#projects">專案</a>
+        <a href="#research">論文</a>
         <a href="#experience">經歷</a>
-        <a href="#competitions">參賽</a>
-        <a href="#contact">聯絡</a>
+        <a href="#competitions">競賽</a>
         <a class="pdf-link" href="resume.pdf" download>PDF 履歷</a>
       </nav>
     </div>
@@ -37,13 +34,14 @@
   <main id="main">
     <section id="about" class="hero">
       <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">AI APPLICATION SYSTEMS · AGENT · LLM</p>
+        <div class="identity">
           <h1>賴績智 <span>Ji-Zhi Lai</span></h1>
-          <p class="job-title">對話式 AI 與 Agent 系統工程師</p>
+          <p class="job-title">AI 應用與 Agent 系統工程師</p>
+          <p class="degree">淡江大學資訊工程學系<br>智慧計算與應用碩士（2026）</p>
         </div>
         <div class="hero-copy">
-          <p>研究與實作皆以自然語言互動為主軸，從長篇對話理解與 Persona 擷取、多角色 Agent 會議架構、RAG 知識問答，到生成式內容工作流與對話策略研究。能將企業使用情境轉化為語言模型、知識、資料與外部工具之間的協作架構，並完成核心模組與系統整合。</p>
+          <p>聚焦自然語言 AI 系統，具電商、生成式影音、即時會議與智慧旅遊等企業合作、產學及研究經驗。曾負責東森 Persona 分析後端、主導 n8n 影音流程，並建立 Multi-Agent 會議核心框架；能從需求拆解到核心模組與系統整合。</p>
+          <p>碩士論文研究多回合說服策略與失敗風險評估。</p>
           <div class="contact-list">
             <a href="mailto:laijizhi890903@gmail.com">laijizhi890903@gmail.com</a>
             <a href="tel:+886963671837">0963-671-837</a>
@@ -52,204 +50,146 @@
           <a class="primary-button" href="resume.pdf" download>下載 PDF 履歷</a>
         </div>
       </div>
+      <div class="container evidence" aria-label="代表證據">
+        <div><strong>13 類・56 欄</strong><span>長篇對話 Persona 資料規格</span></div>
+        <div><strong>30–50 秒</strong><span>單筆約 2 萬中文字測試</span></div>
+        <div><strong>69.3% → 78.2%</strong><span>COMPASS 風險權重實驗</span></div>
+      </div>
     </section>
 
     <section id="skills" class="section">
       <div class="container">
-        <div class="section-title">
-          <p>01</p>
-          <h2>經歷亮點與核心能力</h2>
+        <div class="section-title"><p>01</p><h2>核心能力</h2></div>
+        <div class="skill-grid">
+          <article><h3>AI／NLP</h3><p>LLM Structured Information Extraction、RAG、Hybrid Retrieval、Intent Classification、Slot Filling、Multi-Agent、Function Calling／Tool Use</p></article>
+          <article><h3>Backend／Workflow</h3><p>Python、n8n、REST API、Webhook、JSON Schema、Pandas</p></article>
+          <article><h3>Data／Access Control</h3><p>PostgreSQL、Supabase、RLS、Workflow State Management</p></article>
+          <article><h3>Evaluation／Research</h3><p>Controlled LLM Evaluation、Latency／Cost Measurement、Survival Analysis、C-index、SHAP</p></article>
         </div>
-        <div class="highlights" aria-label="經歷亮點">
-          <div><strong>5</strong><span>個代表專案</span><p>自然語言主軸與跨域 AI</p></div>
-          <div><strong>7</strong><span>件參賽與送件紀錄</span><p>生成式 AI、旅遊、婚宴與升學諮詢</p></div>
-          <div><strong>4</strong><span>項教學與分享經歷</span><p>Python、C、n8n、生成式 AI</p></div>
-        </div>
-        <div class="skills-list">
-          <div><h3>語言理解與資訊擷取</h3><p>長篇對話分析、結構化資訊擷取、客戶 Persona 與資料規格設計</p></div>
-          <div><h3>對話 Agent 與策略規劃</h3><p>Multi-Agent 架構、即時語音互動、Tool Schema 與非合作對話策略</p></div>
-          <div><h3>知識檢索與回應生成</h3><p>RAG、混合檢索、知識圖譜、意圖辨識、多輪記憶與回應生成</p></div>
-          <div><h3>自然語言驅動的流程整合</h3><p>以 n8n、API、Webhook 與資料庫串接生成式內容、人工確認及外部服務</p></div>
-        </div>
+        <p class="tool-note"><strong>工程工具：</strong>Docker（使用經驗）、Linux 基礎指令</p>
       </div>
     </section>
 
     <section id="projects" class="section section-muted">
       <div class="container">
-        <div class="section-title">
-          <p>02</p>
-          <h2>代表專案</h2>
-        </div>
+        <div class="section-title"><p>02</p><h2>核心專案</h2></div>
 
-        <article class="project">
-          <header class="project-heading">
-            <p>東森購物合作</p>
-            <h3>LLM 客戶 Persona 分析系統</h3>
-          </header>
-          <p class="project-intro">客服或行銷人員匯入顧客對話後，系統整理顧客的需求、偏好、消費習慣與互動狀態，輸出可供後續查詢與分析的客戶 Persona。</p>
-          <div class="user-flow" aria-label="東森 Persona 系統使用流程">
-            <span>匯入客服或銷售對話</span><b>→</b><span>辨識並更新顧客資訊</span><b>→</b><span>取得 Persona 與 Excel 報表</span>
+        <article class="project-card">
+          <header><p>2025–2026｜企業合作</p><h3>東森購物｜LLM 客戶 Persona 分析系統</h3></header>
+          <p class="project-lead">客服或行銷人員匯入長篇顧客對話後，系統將需求、偏好、消費習慣與互動狀態整理為一致、可查詢並可持續更新的客戶 Persona。</p>
+          <p class="flow"><strong>使用流程</strong>　匯入客服／銷售對話 → 擷取並合併顧客資訊 → 輸出 Persona 與 Excel</p>
+          <div class="project-grid">
+            <div><h4>核心技術</h4><p>LLM Structured Information Extraction、Structured Output、Persona Schema、Incremental Merge、Python、Pandas</p></div>
+            <div><h4>實測成果</h4><p>建立 13 類、56 欄資料規格；單筆約 2 萬中文字於 30–50 秒完成，依當時模型用量估算成本約 NT$2.20。</p></div>
+            <div class="wide"><h4>核心貢獻</h4><p>設計 Persona 擷取演算法、欄位 Schema 與增量更新邏輯，完成批次後端及 JSON／Excel 輸出；前端由團隊成員負責。</p></div>
           </div>
-          <dl class="project-details">
-            <div><dt>核心技術</dt><dd>LLM-based Information Extraction、Structured Output、Persona Schema、Incremental Update、Python、Pandas。</dd></div>
-            <div><dt>公司效益</dt><dd>將需要逐篇閱讀的長對話轉為一致、可搜尋及可持續更新的客戶資料；單筆約 2 萬中文字測試可於 30–50 秒完成整理，依當時模型用量估算成本約 NT$2.20。</dd></div>
-            <div><dt>我的負責</dt><dd>設計 Persona 提取演算法、欄位規則與更新邏輯，完成後端分析、批次處理及 JSON／Excel 輸出；前端由團隊成員負責。</dd></div>
-          </dl>
         </article>
 
-        <article class="project">
-          <header class="project-heading">
-            <p>好奇兄弟雲端</p>
-            <h3>AI 行銷影片流程自動化平台</h3>
-          </header>
-          <p class="project-intro">中小型商家透過 LINE 提交商品圖片與活動資訊，系統依序產生文案、旁白、字幕與影片，商家可預覽、要求重新生成或直接交付。</p>
-          <div class="user-flow" aria-label="好奇兄弟影片平台使用流程">
-            <span>商家上傳商品素材</span><b>→</b><span>AI 產生文案與影音</span><b>→</b><span>確認、重製或交付</span>
+        <article class="project-card">
+          <header><p>2025｜產學合作</p><h3>好奇兄弟雲端｜AI 行銷影片流程自動化平台</h3></header>
+          <p class="project-lead">中小型商家透過 LINE 提交商品素材，依序完成文案、旁白、字幕、影片生成及人工確認，減少跨工具切換與手動交接。</p>
+          <p class="flow"><strong>使用流程</strong>　提交素材 → AI 生成文案與影音 → 人工確認、重新生成或交付</p>
+          <div class="project-grid">
+            <div><h4>核心技術</h4><p>n8n Workflow Automation、LLM、TTS、Multimodal Generation、Human-in-the-loop、Supabase RLS、Workflow State</p></div>
+            <div><h4>情境試算</h4><p>依每月 20 支、每支 3–5 小時人工製作情境，自動化涵蓋流程約相當於 60–100 人時／月；實際效益取決於審稿與重製比例。</p></div>
+            <div class="wide"><h4>核心貢獻</h4><p>主導需求拆解、整體流程架構與核心 n8n 工作流，整合生成服務、等待續跑、批次狀態、人工確認及使用者層級資料隔離。</p></div>
           </div>
-          <dl class="project-details">
-            <div><dt>核心技術</dt><dd>n8n Workflow Automation、Prompt Engineering、TTS、Multimodal Content Generation、Human-in-the-loop、State Management。</dd></div>
-            <div><dt>公司效益</dt><dd>將分散於多個工具的素材整理、生成、確認與交付整合為一條可追蹤流程。以每月 20 支素材、每支人工 3–5 小時的中小企業情境試算，可釋放約 60–100 人時／月。</dd></div>
-            <div><dt>我的負責</dt><dd>主導需求拆解、整體流程架構與核心工作流實作，負責生成服務整合、批次狀態、資料模型及使用者資料隔離設計。</dd></div>
-          </dl>
         </article>
 
-        <article class="project">
-          <header class="project-heading">
-            <p>會議諸葛</p>
-            <h3>Multi-Agent 智慧會議助理</h3>
-          </header>
-          <p class="project-intro">使用者在會議中與 AI 即時語音互動，多個 Agent 依角色分工理解情境、查詢知識、提供工具建議與決定發言時機；會後保留逐字稿與任務資訊。</p>
-          <div class="user-flow" aria-label="會議諸葛使用流程">
-            <span>進行即時語音會議</span><b>→</b><span>多個 Agent 分工理解與判斷</span><b>→</b><span>保存逐字稿、任務與追蹤資訊</span>
+        <article class="project-card">
+          <header><p>2025｜研究型系統</p><h3>會議諸葛｜Multi-Agent 智慧會議助理</h3></header>
+          <p class="project-lead">使用者可在會議中與 AI 即時語音互動，多個 Agent 依共享會議情境分工理解議題、查詢知識、提供工具建議與判斷發言時機；會後保存逐字稿及待辦。</p>
+          <p class="flow"><strong>使用流程</strong>　即時語音會議 → Agent 分工理解與判斷 → 保存逐字稿、任務與追蹤資訊</p>
+          <div class="project-grid">
+            <div><h4>核心技術</h4><p>Multi-Agent、Realtime Voice Agent、RAG、Function Calling／Tool Use、Conversation Memory、Workflow Automation</p></div>
+            <div><h4>應用價值</h4><p>將會議脈絡、知識查詢與後續任務集中管理，降低資訊散落、重複整理與責任遺漏。</p></div>
+            <div class="wide"><h4>核心貢獻</h4><p>建立 Multi-Agent 核心框架，定義代理角色、共享對話狀態與協作介面，並整合 Realtime 語音、逐字稿、任務及會議資料流程。</p></div>
           </div>
-          <dl class="project-details">
-            <div><dt>核心技術</dt><dd>Multi-Agent、Realtime Voice Agent、RAG、Function Calling／Tool Use、Conversation Memory、Workflow Automation。</dd></div>
-            <div><dt>公司效益</dt><dd>將討論脈絡、知識查詢與待辦集中在同一流程，減少會後資訊散落、重複整理與責任遺漏。</dd></div>
-            <div><dt>我的負責</dt><dd>負責 Multi-Agent 核心框架、代理角色與協作介面設計，以及 Realtime 語音互動與會議資料流程整合。</dd></div>
-          </dl>
-        </article>
-
-        <article class="project">
-          <header class="project-heading">
-            <p>智慧旅遊產學提案</p>
-            <h3>Agentic RAG 行程建議服務</h3>
-          </header>
-          <p class="project-intro">使用者以自然語言提出目的地、時間、偏好與限制，系統整合旅遊知識及即時資訊，產生可持續調整的行程建議。</p>
-          <div class="user-flow" aria-label="智慧旅遊服務使用流程">
-            <span>描述旅遊需求</span><b>→</b><span>補齊資訊並搜尋知識</span><b>→</b><span>產生並持續調整行程</span>
-          </div>
-          <div class="project-gallery two-images">
-            <figure>
-              <img src="assets/travel-ai-architecture.png" alt="多模態旅遊 AI Agent 系統架構圖">
-              <figcaption>多模態旅遊 AI Agent 系統架構</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/smart-travel-slide-01.png" alt="智慧旅遊競賽提案封面">
-              <figcaption>多模態旅遊問答系統提案簡報（2025 第 30 屆大專校院資訊應用服務創新競賽）</figcaption>
-            </figure>
-          </div>
-          <dl class="project-details">
-            <div><dt>核心技術</dt><dd>Intent Classification、Slot Filling、Agentic RAG、Hybrid Retrieval、Knowledge Graph、Multi-turn Memory、Tool Use。</dd></div>
-            <div><dt>公司效益</dt><dd>讓旅遊服務理解口語化需求並組合不同資料來源，減少固定條件搜尋與人工彙整資訊的負擔，同時保留來源追溯與行程調整能力。</dd></div>
-            <div><dt>我的負責</dt><dd>負責 intent-driven RAG、知識融合、slot filling、回應生成，以及安全、效能與驗測流程的架構規劃。</dd></div>
-          </dl>
-        </article>
-
-        <article class="project">
-          <header class="project-heading">
-            <p>仁愛醫院</p>
-            <h3>肝癌存活分析研究</h3>
-          </header>
-          <p class="project-intro">比較不同模型對肝癌病人存活風險的分析能力，並找出可能影響模型判斷的重要特徵。</p>
-          <div class="user-flow" aria-label="仁愛醫院研究流程">
-            <span>整理研究資料</span><b>→</b><span>比較存活分析模型</span><b>→</b><span>檢視表現、特徵與限制</span>
-          </div>
-          <dl class="project-details">
-            <div><dt>核心技術</dt><dd>Survival Analysis、CoxPH、Random Survival Forest、DeepSurv、C-index、SHAP。</dd></div>
-            <div><dt>研究效益</dt><dd>建立可重複比較模型與解釋結果的分析流程，協助研究團隊判斷資料與模型限制；成果不作臨床部署宣稱。</dd></div>
-            <div><dt>我的負責</dt><dd>負責資料前處理、五類模型建置與比較、評估指標及特徵解釋，並整理小樣本與臨床應用限制。</dd></div>
-          </dl>
         </article>
       </div>
     </section>
 
     <section id="research" class="section">
       <div class="container">
-        <div class="section-title">
-          <p>03</p>
-          <h2>碩士論文與規格協作</h2>
+        <div class="section-title"><p>03</p><h2>碩士論文</h2></div>
+        <article class="thesis-card">
+          <p class="kicker">COMPASS</p>
+          <h3>基於對話狀態轉移預測與對話路徑分析之說服式對話系統</h3>
+          <p class="english-title">Contrastive Outcome-guided Modeling of Path-Aware State Shifts for Persuasive Dialogue Systems</p>
+          <div class="thesis-grid">
+            <div><h4>研究問題</h4><p>公益募款與買賣議價等對話中，當下合理的回覆不一定帶來成功；策略需要同時評估目標推進與對話破局風險。</p></div>
+            <div><h4>研究方法</h4><p>依抗拒狀態建立動態路徑圖，融合歷史轉移與語境預測，分別估計成功與失敗的後續成本，再以風險權重選擇策略。</p></div>
+            <div><h4>研究結果</h4><p>兩資料集 × 兩種 LLM 後端的四個受控評估條件中，相較 ASTRO，成功對話平均回合數皆縮短；風險權重實驗成功率 69.3%→78.2%，顯性失敗 24→12。</p></div>
+            <div><h4>本人貢獻</h4><p>負責研究問題定義、COMPASS 方法與系統架構、模擬評估及結果分析。</p></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="additional-projects" class="section section-muted">
+      <div class="container">
+        <div class="section-title"><p>04</p><h2>延伸專案</h2></div>
+        <div class="compact-projects">
+          <article>
+            <p class="kicker">2026｜智慧旅遊產學提案</p>
+            <h3>意圖與填槽驅動的 Agentic RAG 行程服務</h3>
+            <p>以 Intent Classification 與 Slot Filling 補齊旅遊條件；Agent 依缺漏條件與檢索結果選擇知識來源或外部工具，必要時重新檢索並調整行程。</p>
+            <p><strong>核心貢獻：</strong>負責 intent-driven retrieval、知識融合、回應生成及安全、效能與驗測架構。</p>
+            <p class="tech-line">Intent Classification・Slot Filling・Agentic RAG・Hybrid Retrieval・Knowledge Graph・Multi-turn Memory</p>
+          </article>
+          <article>
+            <p class="kicker">2025｜仁愛醫院合作研究</p>
+            <h3>肝癌存活模型評估</h3>
+            <p>建立傳統統計、集成與深度學習存活模型的統一比較流程，以 C-index 與 SHAP 檢視模型表現、重要特徵及小樣本限制。</p>
+            <p><strong>核心貢獻：</strong>負責資料前處理、五類模型建置、驗證及結果分析；研究結果僅用於模型評估。</p>
+            <p class="tech-line">CoxPH・Random Survival Forest・Gradient Boosted Cox・DeepSurv・LogisticHazard・SHAP</p>
+          </article>
         </div>
-        <div class="research-list">
-          <article>
-            <p class="thesis-label">碩士論文 · COMPASS</p>
-            <h3>基於對話狀態轉移預測與對話路徑分析之說服式對話系統</h3>
-            <p class="thesis-name">Contrastive Outcome-guided Modeling of Path-Aware State Shifts for Persuasive Dialogue Systems</p>
-            <dl class="thesis-details">
-              <div><dt>研究問題</dt><dd>在公益募款與買賣議價等非合作對話中，當下合理的回覆不一定帶來成功；策略必須評估跨回合路徑與破局風險。</dd></div>
-              <div><dt>研究方法</dt><dd>估計抗拒狀態分布，依資料支持度融合歷史轉移與語境預測，建立動態路徑圖；分別回推成功與失敗成本，再以風險權重選擇策略。</dd></div>
-              <div><dt>實驗結果</dt><dd>在兩資料集的受控 LLM 評估中，四個條件的成功對話平均回合數皆縮短；COMPASS 成功率為 54.9%／57.8% 與 74.86%／86.33%。風險權重實驗使成功率由 69.3% 提升至 78.2%，顯性失敗由 24 例降至 12 例。</dd></div>
-              <div><dt>本人貢獻</dt><dd>負責研究問題定義、COMPASS 方法與系統架構、兩套資料集的模擬評估，以及路徑成本與風險敏感度分析。</dd></div>
-            </dl>
-          </article>
-          <article>
-            <h3>台鐵／世曦工程｜協助設計鐵道 AI 招標規範</h3>
-            <p>協助將台鐵的語音辨識與知識問答需求整理成招標規範，提供 ASR、Domain Lexicon、BM25、Semantic Retrieval、Knowledge Graph 與 Query Routing 等技術方向；未參與系統實作。</p>
-          </article>
+        <div class="project-gallery">
+          <figure><img src="assets/travel-ai-architecture.png" alt="多模態旅遊 AI Agent 系統架構圖"><figcaption>多模態旅遊 AI Agent 系統架構</figcaption></figure>
+          <figure><img src="assets/smart-travel-slide-01.png" alt="多模態旅遊問答系統提案簡報封面"><figcaption>多模態旅遊問答系統提案簡報</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section section-muted">
+    <section id="experience" class="section">
       <div class="container">
-        <div class="section-title">
-          <p>04</p>
-          <h2>學歷、教學與技術推廣</h2>
-        </div>
-        <div class="timeline">
-          <article><time>2024–2026</time><div><h3>淡江大學 資訊工程學系智慧計算與應用碩士</h3><p>研究方向包含對話策略、AI Agent、LLM 應用與產業系統整合。</p></div></article>
-          <article><time>各一學期</time><div><h3>Python、C 程式設計課程助教</h3><p>批改作業、提供部分期中／期末考題並帶領助教課。</p></div></article>
-          <article><time>二日營隊</time><div><h3>n8n AI Workflow 高中暑期營隊助教</h3><p>協助學員完成工作流建置、AI 工具整合與現場除錯。</p></div></article>
-          <article><time>技術推廣</time><div><h3>生成式 AI 通識分享講者</h3><p>介紹生成式 AI 的應用方式並進行現場示範。</p></div></article>
+        <div class="section-title"><p>05</p><h2>產業協作、學歷與教學</h2></div>
+        <div class="experience-grid">
+          <article><span>產業規格協作</span><h3>台鐵／世曦工程｜鐵道 AI 招標規範</h3><p>協助將鐵道語音辨識與知識問答需求整理為招標規範，提供 ASR、BM25、Semantic Retrieval、Knowledge Graph 與 Query Routing 等技術方向；未參與系統實作。</p></article>
+          <article><span>2024–2026</span><h3>淡江大學 資訊工程學系智慧計算與應用碩士</h3><p>研究方向包含多回合對話策略、LLM、AI Agent 與企業應用整合。</p></article>
+          <article><span>各一學期</span><h3>Python、C 程式設計課程助教</h3><p>批改作業、提供部分期中／期末考題並帶領助教課。</p></article>
+          <article><span>技術推廣</span><h3>n8n 營隊助教與生成式 AI 講者</h3><p>協助高中二日營隊完成工作流與 AI 工具整合；另進行生成式 AI 通識分享與示範。</p></article>
         </div>
       </div>
     </section>
 
-    <section id="competitions" class="section">
+    <section id="competitions" class="section section-muted">
       <div class="container">
-        <div class="section-title">
-          <p>05</p>
-          <h2>競賽參與</h2>
+        <div class="section-title"><p>06</p><h2>競賽與提案</h2></div>
+        <div class="competition-groups">
+          <section><h3>生成式影音與婚宴 AI</h3><ul>
+            <li><strong>2025 中華電信數位創新應用大賽・學生組</strong><span>《連線幸福未來：即時問答與多風格影片生成雲端平台》參賽</span></li>
+            <li><strong>2025 中華電信數位創新應用大賽・學生組</strong><span>《生成式廣告導向的虛擬人商家行銷解決方案》參賽</span></li>
+            <li><strong>2025 第 30 屆大專校院資訊應用服務創新競賽・產學合作組</strong><span>《為婚宴新人減勞的 RAG 問答系統與多風格影片生成系統》參賽</span></li>
+            <li><strong>114 年度 AIGO 淬煉實戰盃・創新提案組</strong><span>《基於知識檢索與多風格影片生成的智慧婚禮系統》提案送件</span></li>
+          </ul></section>
+          <section><h3>智慧旅遊、行銷與教育</h3><ul>
+            <li><strong>2025 ITA 智慧旅遊程式創意提案競賽</strong><span>參賽</span></li>
+            <li><strong>2025 國泰人壽全國創意行銷提案暨圖文競賽・行銷提案組</strong><span>參賽</span></li>
+            <li><strong>2025 全國創意與智慧科技競賽</strong><span>《大學好夥伴 College Buddy》作品送件</span></li>
+          </ul></section>
         </div>
-        <ul class="competition-list">
-          <li><span>2025</span><div><strong>中華電信數位創新應用大賽・學生組</strong><p>《連線幸福未來：即時問答與多風格影片生成雲端平台》參賽</p></div></li>
-          <li><span>2025</span><div><strong>中華電信數位創新應用大賽・學生組</strong><p>《生成式廣告導向的虛擬人商家行銷解決方案》參賽</p></div></li>
-          <li><span>2025</span><div><strong>ITA 智慧旅遊程式創意提案競賽</strong><p>參賽</p></div></li>
-          <li><span>2025</span><div><strong>國泰人壽全國創意行銷提案暨圖文競賽・行銷提案組</strong><p>參賽</p></div></li>
-          <li><span>2025</span><div><strong>第 30 屆大專校院資訊應用服務創新競賽・產學合作組</strong><p>《為婚宴新人減勞的 RAG 問答系統與多風格影片生成系統》參賽</p></div></li>
-          <li><span>2025</span><div><strong>114 年度 AIGO 淬煉實戰盃・創新提案組</strong><p>《基於知識檢索與多風格影片生成的智慧婚禮系統》提案送件</p></div></li>
-          <li><span>2025</span><div><strong>全國創意與智慧科技競賽</strong><p>《大學好夥伴 College Buddy》作品送件</p></div></li>
-        </ul>
       </div>
     </section>
 
     <section id="contact" class="section contact-section">
       <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">CONTACT</p>
-          <h2>聯絡方式</h2>
-        </div>
-        <div>
-          <a href="mailto:laijizhi890903@gmail.com">laijizhi890903@gmail.com</a>
-          <a href="tel:+886963671837">0963-671-837</a>
-          <a href="https://github.com/thisisanOldMan" target="_blank" rel="noreferrer">github.com/thisisanOldMan</a>
-          <p>英文：TOEIC 650，可閱讀技術文件並進行基礎溝通。</p>
-        </div>
+        <div><h2>聯絡方式</h2><p>英文：TOEIC 650，可閱讀技術文件並進行基礎溝通。</p></div>
+        <div><a href="mailto:laijizhi890903@gmail.com">laijizhi890903@gmail.com</a><a href="tel:+886963671837">0963-671-837</a><a href="https://thisisanoldman.github.io">thisisanoldman.github.io</a></div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">© 2026 Ji-Zhi Lai</div>
-  </footer>
+  <footer class="site-footer"><div class="container">© 2026 Ji-Zhi Lai</div></footer>
 </body>
 </html>
