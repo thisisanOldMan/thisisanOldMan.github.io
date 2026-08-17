@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LLM 資料管線、Realtime Agent、LightRAG 知識圖譜與 GenAI 工作流專案。">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>LLM／Agent 專案｜賴績智 Ji-Zhi Lai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body id="top" data-page="projects">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html">賴績智 <span>Ji-Zhi Lai</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="履歷分類"><a href="index.html" data-page="home">首頁</a><a href="skills.html" data-page="skills">核心能力</a><a href="projects.html" data-page="projects" aria-current="page">LLM／Agent 專案</a><a href="thesis.html" data-page="thesis">研究方法</a><a href="experience.html" data-page="experience">教學與經歷</a><a href="competitions.html" data-page="competitions">競賽與提案</a><a class="pdf-link" href="賴績智_履歷_LLM_AI_Agent.pdf" download>PDF 履歷</a></nav>
+  </div></header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title"><div class="container"><p>02 / SELECTED WORK</p><h1 id="page-title">LLM／Agent 專案</h1><div>三個案例，分別呈現 LLM 資料管線、Agent 工具流程與可追溯的 RAG 服務。</div></div></section>
+    <section class="section section-muted"><div class="container">
+      <div class="section-title"><p>02.1</p><h2>代表案例</h2></div>
+
+      <article id="persona" class="project-card featured-project">
+        <header><div><p>2025–2026｜企業合作</p><h3>大型語言模型客戶輪廓分析系統</h3></div><span class="status-label">LLM SOLUTION</span></header>
+        <p class="project-lead">將長篇客服與銷售對話，轉成可查詢、可覆核、可持續更新的客戶輪廓。</p>
+        <p class="flow"><strong>FLOW</strong>　對話 → Schema 擷取 → 驗證／修復 → 增量合併 → JSON／Excel</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>設計 Persona Schema、模型輸出驗證與增量合併流程，完成 provider adapter、批次後端與輸出。</p></div>
+          <div><h4>關鍵決策</h4><p>以同一資料契約隔離模型差異，可接雲端 API 或 Llama-compatible／Ollama 地端端點。</p></div>
+          <div><h4>技術</h4><p>Python、Prompt／Schema、Provider Abstraction、JSON Repair、Pandas。</p></div>
+          <div><h4>代表測試</h4><p>單筆約 2 萬中文字，模型完成結構化初稿約需 30–50 秒。</p></div>
+        </div>
+        <div class="synthetic-console" role="img" aria-label="合成 Persona 資料管線示意，展示對話輸入、欄位擷取與輪廓更新">
+          <div class="console-top"><span>ILLUSTRATIVE PERSONA PIPELINE</span><span>schema example</span></div>
+          <div class="console-body">
+            <div class="conversation-snippet"><p>synthetic-sample-01</p><strong>「偏好低糖、週末到貨，最近開始為家人比較保健品。」</strong><span>zh-TW · structured extraction</span></div>
+            <div class="console-arrow" aria-hidden="true">→</div>
+            <div class="persona-fields"><p>profile.update</p><dl><div><dt>preference</dt><dd>低糖</dd></div><div><dt>delivery_window</dt><dd>週末</dd></div><div><dt>intent</dt><dd>家庭保健比較</dd></div><div><dt>source_turn</dt><dd>sample-01</dd></div></dl></div>
+          </div>
+        </div>
+      </article>
+
+      <article id="meeting-agent" class="project-card">
+        <header><div><p>2025｜研究型系統</p><h3>會議諸葛｜Realtime Agent 與任務事件流程</h3></div><span class="status-label">AGENT WORKFLOW</span></header>
+        <p class="project-lead">將即時會議語音脈絡，轉成可觸發、可保存、可追蹤的工具與任務事件。</p>
+        <p class="flow"><strong>FLOW</strong>　語音脈絡 → Realtime Agent → Function Calling → Webhook／任務事件</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>整合 Realtime Agent 與工具 Schema，串接 WebRTC、Function Calling event、Webhook 與會議資料保存。</p></div>
+          <div><h4>關鍵決策</h4><p>把模型判斷轉成結構化事件，使會中互動與會後任務共用同一份狀態。</p></div>
+          <div><h4>技術</h4><p>TypeScript、React、Realtime／WebRTC、Function Calling、Webhook。</p></div>
+          <div><h4>成果</h4><p>完成即時逐字稿、工具事件、待辦、提醒與任務狀態的整合原型。</p></div>
+        </div>
+        <figure class="project-visual"><img src="assets/meeting-zhuge-user-interface.png" alt="會議諸葛即時會議助理介面"><figcaption>即時會議介面：集中呈現會議脈絡、任務進度、提醒與追蹤資訊。</figcaption></figure>
+      </article>
+
+      <article id="lightrag" class="project-card">
+        <header><div><p>2025–2026｜開源專案客製</p><h3>LightRAG 知識問答與模型端點整合</h3></div><span class="status-label">RAG + LOCAL</span></header>
+        <p class="project-lead">在 HKUDS／LightRAG 基礎上客製知識問答流程，讓回答帶回來源、實體、關係與原文片段。</p>
+        <p class="flow"><strong>FLOW</strong>　文件 → 實體／關係 → 混合檢索 → 回答＋來源 → Graph Search</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>調整查詢 API、來源追溯、Graph Search、檢索設定、繁中介面與本機執行環境。</p></div>
+          <div><h4>關鍵決策</h4><p>沿用 upstream RAG 核心與 bindings，專注補齊可追溯輸出、使用介面與模型端點切換。</p></div>
+          <div><h4>技術</h4><p>Python、React、LightRAG、NetworkX、REST API、Llama-compatible endpoint。</p></div>
+          <div><h4>實機驗證</h4><p>本機啟動原生 server／WebUI，完成 16 節點、18 關係的圖譜載入與視覺化驗證。</p></div>
+        </div>
+        <figure class="project-visual graph-visual"><img src="assets/lightrag-knowledge-graph.png" alt="LightRAG 專案執行後的知識圖譜介面，以合成架構資料呈現節點與關係"><figcaption>實機畫面｜LightRAG WebUI 知識圖譜；公開版以合成架構資料生成。</figcaption></figure>
+      </article>
+    </div></section>
+
+    <section class="section"><div class="container">
+      <div class="section-title"><p>02.2</p><h2>延伸案例</h2></div>
+      <div class="extended-evidence">
+        <article id="genai-workflow" class="evidence-case full-width workflow-case">
+          <div class="case-heading"><span>GENAI WORKFLOW</span><h3>LINE 行銷影片生成工作流</h3></div>
+          <p>以 LINE 作為單一入口，將文案、旁白、字幕與影片生成串成具狀態管理與人工確認的非同步流程。</p>
+          <p><strong>我的責任：</strong>主導需求拆解與 n8n 狀態機，整合生成服務、等待／輪詢、錯誤分支、修改重製與使用者資料邊界。</p>
+          <div class="compact-tech">n8n · LLM · TTS · Video API · Supabase · Human-in-the-loop</div>
+          <div class="project-media-grid project-media-grid-two" aria-label="行銷影片工作流介面與生成成果">
+            <figure class="project-visual portrait"><img src="assets/good-brothers-user-interface.jpg" alt="商家在 LINE 上操作 AI 行銷影片生成服務"><figcaption>LINE 使用介面</figcaption></figure>
+            <figure class="project-visual"><video controls preload="metadata" playsinline aria-label="AI 生成的日式豬排漢堡廣告影片"><source src="assets/good-brothers-ad-pork-burger.mp4" type="video/mp4">瀏覽器不支援影片播放。</video><figcaption>生成影片成果</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="evidence-case"><div class="case-heading"><span>RESEARCH PROTOTYPE</span><h3>COMPASS 多回合策略決策</h3></div><p>以狀態轉移與成功／失敗雙終局成本，評估候選策略對後續對話路徑的影響。</p><p><strong>我的責任：</strong>提出方法、建立實驗流程，完成策略演算法與結果解釋。</p><a class="inline-link" href="thesis.html">閱讀研究方法 →</a></article>
+        <article class="evidence-case"><div class="case-heading"><span>AGENTIC RAG PROPOSAL</span><h3>意圖驅動智慧旅遊</h3></div><p>規劃以意圖辨識與槽位補問驅動的 RAG 迴圈，依證據充分度決定回答、補問或重查。</p><p><strong>我的責任：</strong>規劃知識檢索、資料融合、回應生成與驗測架構。</p></article>
+        <article class="evidence-case"><div class="case-heading"><span>MODEL EVALUATION</span><h3>肝癌存活模型評估</h3></div><p>建立共用評估流程，比較統計、集成與深度學習模型，並以 C-index、Kaplan–Meier 與 SHAP 分析。</p><p><strong>我的責任：</strong>資料前處理、五類模型建置與結果分析。</p></article>
+        <article class="evidence-case"><div class="case-heading"><span>SPECIFICATION</span><h3>鐵道 AI 招標規範</h3></div><p>協助將語音辨識、名詞校正與技術文件問答需求，轉成功能、檢索與驗收規格。</p><p><strong>我的責任：</strong>場域需求轉譯與檢索方案規劃。</p></article>
+      </div>
+    </div></section>
+  </main>
+  <div class="page-end"><div class="container"><a class="back-to-top" href="#top">返回頁首 <span aria-hidden="true">↑</span></a></div></div>
+  <footer class="site-footer"><div class="container">© 2026 Ji-Zhi Lai</div></footer>
+</body>
+</html>
