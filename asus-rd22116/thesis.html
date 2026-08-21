@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="基於對話狀態轉移預測與對話路徑分析之說服式對話系統 COMPASS。">
+  <meta name="description" content="COMPASS 多回合對話決策框架：結合狀態轉移預測、路徑成本與比較實驗評估候選策略。">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>碩士論文｜賴績智 Ji-Zhi Lai</title>
@@ -24,7 +24,7 @@
         <a href="skills.html" data-page="skills">核心能力</a>
         <a href="projects.html" data-page="projects">LLM／Agent 專案</a>
         <a href="thesis.html" data-page="thesis" aria-current="page">研究方法</a>
-        <a href="experience.html" data-page="experience">教學與經歷</a>
+        <a href="experience.html" data-page="experience">教學與技術傳播</a>
         <a href="competitions.html" data-page="competitions">競賽與提案</a>
         <a class="pdf-link" href="賴績智_履歷_LLM_AI_Agent.pdf" download>PDF 履歷</a>
       </nav>
@@ -35,7 +35,7 @@
       <div class="container">
         <p>03 / RESEARCH METHOD</p>
         <h1 id="page-title">研究方法</h1>
-        <div>從研究問題、baseline 與狀態建模，到比較實驗與結果解釋，驗證多回合對話策略決策方法。</div>
+        <div>從問題定義、baseline、狀態建模到比較實驗，建立可重現的多回合對話策略驗證流程。</div>
       </div>
     </section>
     <section id="research" class="section">
@@ -46,9 +46,9 @@
           <h3>基於對話狀態轉移預測與對話路徑分析之說服式對話系統</h3>
           <p class="english-title">Contrastive Outcome-guided Modeling of Path-Aware State Shifts for Persuasive Dialogue Systems</p>
           <div class="thesis-grid">
-            <div><h4>研究問題</h4><p>讓多回合對話系統不只選下一步，也評估候選策略對整段對話結果的影響。</p></div>
-            <div><h4>研究方法</h4><p>以對話狀態、候選策略與成功／失敗終局成本建立決策模型，並在固定資料與評估設定下進行路徑及敏感度分析。</p></div>
-            <div><h4>代表結果</h4><p>在本研究固定資料與 LLM 模擬環境下，CraigslistBargain／GPT‑3.5 的成功率達 74.86%，成功對話平均 4.858 輪。</p></div>
+            <div><h4>研究問題</h4><p>比較候選策略對後續對話路徑與終局結果的影響，將策略選擇由單輪回應提升為多步決策問題。</p></div>
+            <div><h4>研究方法</h4><p>以對話狀態、候選策略及成功／失敗終局成本建立有限視界決策模型，並在固定資料集與模擬設定下進行路徑及敏感度分析。</p></div>
+            <div><h4>實驗結果</h4><p>在 CraigslistBargain 資料集與 GPT‑3.5 模擬設定下，COMPASS 成功率為 74.86%，成功對話平均 4.858 輪；結果限於該固定實驗條件。</p></div>
             <div><h4>核心貢獻</h4><p>把策略選擇從單輪回應，提升為兼顧成功推進與失敗風險的有限視界對話路徑決策。</p></div>
           </div>
           <div class="thesis-figures" aria-label="COMPASS 對話路徑分析圖">
