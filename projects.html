@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="LLM 結構化資料管線、Realtime Agent、LightRAG 知識檢索與 GenAI 自動化工作流專案。">
+  <meta name="description" content="客戶輪廓、即時會議 Agent、經發局知識問答、AI 工作流與預後存活率預測專案。">
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <title>LLM／Agent 專案｜賴績智 Ji-Zhi Lai</title>
@@ -20,20 +20,21 @@
   </div></header>
 
   <main id="main">
-    <section class="page-hero" aria-labelledby="page-title"><div class="container"><p>02 / SELECTED WORK</p><h1 id="page-title">LLM／Agent 專案</h1><div>三項完整實作，呈現資料契約、Agent 工具流程與可追溯 RAG 服務的設計及驗證能力。</div></div></section>
+    <section class="page-hero" aria-labelledby="page-title"><div class="container"><p>02 / SELECTED WORK</p><h1 id="page-title">LLM／Agent 專案</h1><div>呈現我如何運用 LLM、AI Agent、RAG 與預測模型，解決企業資料整理、即時協作、知識查詢與風險預測問題。</div></div></section>
     <section class="section section-muted"><div class="container">
-      <div class="section-title"><p>02.1</p><h2>代表案例</h2></div>
+      <div class="section-title"><p>02.1</p><h2>核心專案</h2></div>
 
       <article id="persona" class="project-card featured-project">
-        <header><div><p>2025–2026｜企業合作</p><h3>大型語言模型客戶輪廓分析系統</h3></div><span class="status-label">LLM SOLUTION</span></header>
-        <p class="project-lead">將分散於長篇客服與銷售對話中的需求、偏好及互動訊號，轉為具明確資料契約與持續更新機制的客戶輪廓。</p>
-        <p class="flow"><strong>FLOW</strong>　對話資料 → Schema 設計 → LLM 結構化擷取 → 驗證修復 → 增量更新與批次輸出</p>
+        <header><div><p>2025–2026｜企業合作</p><h3>客戶輪廓分析系統</h3></div><span class="status-label">LLM SOLUTION</span></header>
+        <p class="project-lead">將長篇客服與銷售對話自動整理為可持續更新的客戶輪廓，讓客服與行銷人員快速掌握顧客需求、偏好與互動變化。</p>
+        <p class="flow"><strong>使用流程</strong>　匯入對話 → AI 擷取需求與偏好 → 驗證與更新 → 客戶輪廓／Excel</p>
         <div class="project-grid">
-          <div><h4>我的責任</h4><p>負責 Persona 資料模型與後端資料流設計，建立結構化擷取、輸出驗證、異常修復、增量合併及批次輸出流程。</p></div>
-          <div><h4>關鍵決策</h4><p>以統一資料契約與 Provider Adapter 隔離模型供應商差異，使擷取、驗證與更新邏輯不依賴單一模型端點。</p></div>
-          <div><h4>技術</h4><p>Python、Prompt Engineering、JSON Schema、Provider Adapter、pandas。</p></div>
-          <div><h4>工程驗證</h4><p>完成單筆約 2 萬中文字的結構化擷取與輸出驗證，涵蓋解析、修復、增量合併及 JSON／Excel 交付流程。</p></div>
+          <div><h4>解決的問題</h4><p>對話篇幅長且資訊分散，人工整理耗時，也難以隨新互動持續更新。</p></div>
+          <div><h4>核心亮點</h4><p>依固定欄位整理需求、偏好與互動紀錄；新對話加入後可自動更新，並檢查缺漏或格式錯誤。</p></div>
+          <div><h4>實作成果</h4><p>完成單筆約 2 萬中文字的擷取與驗證，並可批次輸出 JSON／Excel 客戶輪廓。</p></div>
+          <div><h4>我的角色</h4><p>設計客戶輪廓欄位與處理方式，完成對話擷取、結果檢查、輪廓更新與報表輸出。</p></div>
         </div>
+        <div class="compact-tech">Python · LLM 結構化輸出 · Persona Schema · JSON Schema · pandas</div>
         <div class="synthetic-console" role="img" aria-label="合成 Persona 資料管線示意，展示對話輸入、欄位擷取與輪廓更新">
           <div class="console-top"><span>ILLUSTRATIVE PERSONA PIPELINE</span><span>schema example</span></div>
           <div class="console-body">
@@ -45,42 +46,42 @@
       </article>
 
       <article id="meeting-agent" class="project-card">
-        <header><div><p>2025｜研究型系統</p><h3>會議諸葛｜Realtime Agent 與任務事件流程</h3></div><span class="status-label">AGENT WORKFLOW</span></header>
-        <p class="project-lead">建構即時會議 Agent 的語音脈絡、工具呼叫與任務狀態流程，使模型判斷能進一步驅動可保存、可追蹤的系統事件。</p>
-        <p class="flow"><strong>FLOW</strong>　語音脈絡 → Realtime Agent → Function Calling → Webhook／任務事件</p>
+        <header><div><p>2025｜研究型系統</p><h3>即時會議 Agent</h3></div><span class="status-label">AGENT WORKFLOW</span></header>
+        <p class="project-lead">讓 AI 在會議中即時理解語音內容、建立待辦與提醒，並將會中決策延續為會後可追蹤的任務。</p>
+        <p class="flow"><strong>使用流程</strong>　即時語音會議 → AI 理解脈絡 → 建立待辦／提醒 → 會後任務追蹤</p>
         <div class="project-grid">
-          <div><h4>我的責任</h4><p>負責 Realtime Agent 與工具契約整合，串接 WebRTC、Function Calling、Webhook、會議資料及任務狀態。</p></div>
-          <div><h4>關鍵決策</h4><p>以結構化事件作為模型與應用系統的整合邊界，使即時互動、工具執行與會後任務共用一致狀態。</p></div>
-          <div><h4>技術</h4><p>TypeScript、React、Realtime／WebRTC、Function Calling、Webhook。</p></div>
-          <div><h4>系統成果</h4><p>整合即時逐字稿、工具呼叫、待辦、提醒與任務狀態，使會中事件能延續為會後可追蹤的工作項目。</p></div>
+          <div><h4>解決的問題</h4><p>會議資訊、待辦與責任歸屬常散落於逐字稿和不同工具，會後容易漏接。</p></div>
+          <div><h4>核心亮點</h4><p>AI 可依會議脈絡使用工具、建立待辦與提醒，銜接會中互動與會後工作。</p></div>
+          <div><h4>實作成果</h4><p>將即時逐字稿、工具呼叫、待辦、提醒與任務進度集中於同一介面。</p></div>
+          <div><h4>我的角色</h4><p>規劃 AI 即時互動與任務功能，串接語音連線、工具呼叫、提醒與待辦資料。</p></div>
         </div>
+        <div class="compact-tech">TypeScript · React · Realtime API · WebRTC · Function Calling · Webhook</div>
         <figure class="project-visual"><img src="assets/meeting-zhuge-user-interface.png" alt="會議諸葛即時會議助理介面"><figcaption>即時會議介面：集中呈現會議脈絡、任務進度、提醒與追蹤資訊。</figcaption></figure>
       </article>
 
       <article id="lightrag" class="project-card">
-        <header><div><p>2025–2026｜開源專案客製</p><h3>LightRAG 可追溯知識問答服務</h3></div><span class="status-label">RAG / KNOWLEDGE GRAPH</span></header>
-        <p class="project-lead">基於 HKUDS／LightRAG 客製知識問答流程，整合多路檢索、知識圖譜與來源追溯，使回答能回傳實體、關係及原文片段。</p>
-        <p class="flow"><strong>FLOW</strong>　文件處理與索引 → 檢索（向量／圖譜／Hybrid） → 回答生成與來源追溯 → Graph Search</p>
+        <header><div><p>2025–2026｜開源專案客製</p><h3>經發局知識問答系統</h3></div><span class="status-label">RAG / KNOWLEDGE GRAPH</span></header>
+        <p class="project-lead">將經發局文件整理成可查詢的知識服務，回答同時呈現關聯實體、知識脈絡與原文依據，方便快速核對來源。</p>
+        <p class="flow"><strong>使用流程</strong>　匯入文件 → 建立知識索引 → 查詢與檢索 → 回答附來源與關聯圖譜</p>
         <div class="project-grid">
-          <div><h4>我的責任</h4><p>負責查詢 API、來源追溯、Graph Search、檢索設定、繁中 WebUI 與本機服務環境的客製及整合。</p></div>
-          <div><h4>關鍵決策</h4><p>保留 upstream RAG 核心與 bindings，將客製範圍集中於來源追溯、檢索設定、查詢 API 與使用介面，保留後續升級路徑。</p></div>
-          <div><h4>技術</h4><p>Python、LightRAG、NetworkX、RESTful API、React、知識圖譜、檢索（向量／圖譜／Hybrid）。</p></div>
-          <div><h4>實機驗證</h4><p>完成本機 Server／WebUI 啟動、知識圖譜載入、節點關係呈現與查詢流程檢查；公開畫面使用 16 節點、18 關係的合成資料。</p></div>
+          <div><h4>解決的問題</h4><p>文件量大且關聯分散，單純搜尋難以快速找到完整脈絡，也不易核對回答依據。</p></div>
+          <div><h4>核心亮點</h4><p>系統不只提供答案，也能顯示引用來源與概念之間的關係，方便追查答案依據。</p></div>
+          <div><h4>實作成果</h4><p>完成繁中操作介面、文件問答、來源追溯與知識圖譜瀏覽，並在本機完整運行。</p></div>
+          <div><h4>我的角色</h4><p>負責文件問答、來源追溯、圖譜查詢、繁中介面與本機部署。</p></div>
         </div>
+        <div class="compact-tech">Python · LightRAG · RESTful API · React · 向量檢索 · 知識圖譜</div>
         <figure class="project-visual graph-visual"><img src="assets/lightrag-knowledge-graph.png" alt="LightRAG 專案執行後的知識圖譜介面，以合成架構資料呈現節點與關係"><figcaption>實機畫面｜LightRAG WebUI 知識圖譜；公開版以合成架構資料生成。</figcaption></figure>
       </article>
     </div></section>
 
     <section class="section"><div class="container">
-      <div class="section-title"><p>02.2</p><h2>延伸案例</h2></div>
+      <div class="section-title"><p>02.2</p><h2>跨域 AI 應用</h2></div>
       <div class="extended-evidence">
         <article id="genai-workflow" class="evidence-case full-width workflow-case">
-          <div class="case-heading"><span>GENAI AUTOMATION</span><h3>好奇兄弟雲端｜AI 行銷影片流程自動化平台</h3></div>
-          <p><strong>專案目的：</strong>讓商家直接在 LINE 提交商品素材，將文案、旁白、字幕與影片生成整合為可預覽、修正及重新生成的單一流程。</p>
-          <p><strong>核心做法：</strong>以 n8n 編排 LINE Webhook 觸發的生成工作流，串接 LLM、TTS 與影片生成服務；透過非同步任務、狀態追蹤及人工確認管理生成與交付。</p>
-          <div class="compact-tech">n8n · LINE Messaging API · LLM · TTS · 影片生成 API · Supabase · 非同步任務編排 · Human-in-the-loop</div>
-          <p><strong>應用價值：</strong>將素材提交、內容生成、修改與交付收斂於 LINE，降低跨工具操作與人工交接成本。</p>
-          <p><strong>負責範圍：</strong>主導需求拆解、工作流與狀態模型設計，整合生成服務、異常處理、人工確認及使用者／任務資料隔離。</p>
+          <div class="case-heading"><span>AI WORKFLOW</span><h3>好奇兄弟｜LINE AI 行銷影片生成系統</h3></div>
+          <p>讓商家只需透過 LINE 提交商品素材，即可完成從文案、旁白到影片的行銷內容製作；<b>支援預覽、修改、重新生成與人工確認，將原本分散於多個工具的作業集中管理。</b></p>
+          <div class="compact-tech">LINE Messaging API · n8n · LLM／TTS · 影片生成 API · Supabase</div>
+          <p><strong>我的角色：</strong>主導需求與操作流程，整合各項生成服務，並設計錯誤處理、人工確認與不同使用者的資料分隔。</p>
           <div class="project-media-grid project-media-grid-two" aria-label="行銷影片工作流介面與生成成果">
             <figure class="project-visual portrait"><img src="assets/good-brothers-user-interface.jpg" alt="商家在 LINE 上操作 AI 行銷影片生成服務"><figcaption>LINE 使用介面</figcaption></figure>
             <figure class="project-visual"><video controls preload="metadata" playsinline aria-label="AI 生成的日式豬排漢堡廣告影片"><source src="assets/good-brothers-ad-pork-burger.mp4" type="video/mp4">瀏覽器不支援影片播放。</video><figcaption>生成影片成果</figcaption></figure>
@@ -88,37 +89,29 @@
         </article>
 
         <article class="evidence-case">
-          <div class="case-heading"><span>RESEARCH PROTOTYPE</span><h3>COMPASS｜多回合對話策略決策框架</h3></div>
-          <p><strong>研究目的：</strong>評估候選對話策略對後續狀態與終局結果的影響，避免只依單輪回應選擇下一步策略。</p>
-          <p><strong>核心做法：</strong>將策略選擇建模為有限視界決策問題，結合狀態轉移預測與成功／失敗路徑成本，比較候選策略的多步對話路徑。</p>
-          <div class="compact-tech">有限視界決策 · 狀態轉移預測 · 路徑成本分析 · LLM 對話模擬</div>
-          <p><strong>研究結果：</strong>在 CraigslistBargain 與 GPT‑3.5 的固定模擬設定下，成功率為 74.86%，成功對話平均 4.858 輪。</p>
-          <p><strong>負責範圍：</strong>提出決策方法，完成演算法實作、基準方案、實驗設計與結果分析。</p>
+          <div class="case-heading"><span>DIALOGUE STRATEGY</span><h3>COMPASS｜多回合對話策略選擇</h3></div>
+          <p>讓對話系統不只回應當下，而能比較不同策略對後續互動與最終結果的影響；<b>在 CraigslistBargain／GPT‑3.5 固定模擬設定下，成功率為 74.86%，成功對話平均 4.858 輪。</b></p>
+          <div class="compact-tech">有限視界規劃 · 狀態轉移建模 · 對話模擬 · 策略評估</div>
+          <p><strong>我的角色：</strong>提出決策方法，完成演算法實作、基準方案、實驗設計與結果分析。</p>
           <a class="inline-link" href="thesis.html">閱讀研究方法 →</a>
         </article>
         <article class="evidence-case">
-          <div class="case-heading"><span>AGENTIC RAG PROPOSAL</span><h3>意圖驅動智慧旅遊｜Agentic RAG 架構提案</h3></div>
-          <p><strong>專案目的：</strong>將地點、時間、偏好與限制等自然語言需求，轉換為可補問、可查證且能持續調整的個人化行程。</p>
-          <p><strong>核心做法：</strong>以意圖辨識、Slot Filling 與檢索路由建立 Agentic RAG 決策迴圈，依查詢需求與證據充分度決定回答、補問、切換檢索來源或重新檢索。</p>
-          <div class="compact-tech">Agentic RAG · 意圖辨識 · Slot Filling · 檢索（BM25／向量／Hybrid）· 知識圖譜 · 檢索路由</div>
-          <p><strong>應用價值：</strong>將條件補齊、跨來源檢索與行程調整整合於同一段對話，降低反覆查找及手動整理負擔。</p>
-          <p><strong>負責範圍：</strong>規劃意圖驅動的檢索流程、檢索路由、多來源資料融合、回應生成與評估流程。</p>
+          <div class="case-heading"><span>AGENTIC RAG</span><h3>智慧旅遊行程規劃系統</h3></div>
+          <p>讓旅遊規劃從一次性生成，變成會主動補問、查找資訊並依需求持續調整的互動流程；<b>整合地點、時間、偏好與限制，產生可持續修改的個人化行程。</b></p>
+          <div class="compact-tech">Agentic RAG · 意圖辨識與 Slot Filling · 檢索（BM25／向量／知識圖譜）</div>
+          <p><strong>我的角色：</strong>設計系統如何理解需求、補問條件、查找資料與生成行程，並規劃評估方式。</p>
         </article>
         <article class="evidence-case">
-          <div class="case-heading"><span>MODEL EVALUATION</span><h3>仁愛醫院合作｜肝癌存活風險建模與比較</h3></div>
-          <p><strong>研究目的：</strong>建立可重複的肝癌存活分析流程，以一致的資料切分與評估標準比較統計、集成與深度學習模型。</p>
-          <p><strong>核心做法：</strong>比較五種存活模型；以 C-index 評估風險排序能力，搭配 Kaplan–Meier、個案存活曲線與 SHAP 分析群體趨勢、個別風險及特徵貢獻。</p>
-          <div class="compact-tech">Survival Analysis · CoxPH · Random Survival Forest · Gradient Boosted Cox · DeepSurv · LogisticHazard · C-index · Kaplan–Meier · SHAP</div>
-          <p><strong>研究價值：</strong>讓五種模型共用一致的資料處理、切分與評估介面，提升跨模型比較的一致性。</p>
-          <p><strong>負責範圍：</strong>負責資料前處理、五種模型建置、驗證、結果比較及模型解釋分析。</p>
+          <div class="case-heading"><span>SURVIVAL PREDICTION</span><h3>仁愛醫院合作｜肝癌預後存活率預測</h3></div>
+          <p>預測肝癌病患在不同時間點的預後存活率，並分析影響預後風險的重要特徵；<b>以個人化存活曲線呈現時間風險，並用 SHAP 說明各項特徵對預測結果的影響。</b></p>
+          <div class="compact-tech">Survival Analysis · CoxPH／Random Survival Forest／DeepSurv · C-index／Kaplan–Meier · SHAP</div>
+          <p><strong>我的角色：</strong>負責資料整理、模型訓練與驗證，以及存活率預測與預後因子分析。</p>
         </article>
         <article class="evidence-case">
-          <div class="case-heading"><span>SPECIFICATION</span><h3>台鐵／世曦工程｜鐵道 AI 招標規格協作</h3></div>
-          <p><strong>專案目的：</strong>將語音辨識、鐵道術語校正與技術文件問答需求，轉化為可供招標、方案比較及驗收的 AI 系統規格。</p>
-          <p><strong>核心做法：</strong>將方案拆為語音辨識與領域術語校正、技術文件檢索問答兩條能力鏈，並定義資料範圍、系統邊界及驗收方式。</p>
-          <div class="compact-tech">ASR · 領域術語校正 · RAG · 檢索（關鍵字／向量）· 知識圖譜</div>
-          <p><strong>交付價值：</strong>形成涵蓋功能需求、技術方案、資料條件與判定基準的招標及評選規格。</p>
-          <p><strong>負責範圍：</strong>負責場域需求轉譯、檢索方案設計、功能規格與驗收條件整理。</p>
+          <div class="case-heading"><span>AI SPECIFICATION</span><h3>台鐵／世曦工程｜鐵道 AI 招標規格</h3></div>
+          <p>將鐵道場域需要的 AI 功能轉化為可供廠商提案、方案比較與成果驗收的招標規格；<b>涵蓋語音辨識、專有名詞校正、技術文件問答及明確的驗收基準。</b></p>
+          <div class="compact-tech">ASR · 專有名詞校正 · RAG · 多路檢索</div>
+          <p><strong>我的角色：</strong>負責理解場域需求、規劃文件問答方式，並撰寫功能與驗收條件。</p>
         </article>
       </div>
     </div></section>

@@ -232,6 +232,7 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .case-heading h3 { margin-bottom: 12px; font-size: 20px; }
 .evidence-case > p { font-size: 14px; }
 .compact-tech { margin-top: 14px; color: var(--blue); font-family: var(--mono); font-size: 11px; line-height: 1.7; }
+.project-card > .compact-tech { margin: 14px 26px 18px; }
 .workflow-case { padding-bottom: 0; }
 .workflow-case .project-media-grid { margin: 20px -24px 0; }
 .evidence-case ul { margin-bottom: 18px; padding-left: 1.25em; font-size: 13px; }
@@ -260,6 +261,7 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 }
 
 @media (max-width: 680px) {
+  .project-card > .compact-tech { margin-inline: 19px; }
   body { font-size: 15.5px; line-height: 1.65; }
   .container { width: min(calc(100% - 28px), var(--container)); }
   .hero { padding-top: 36px; }
