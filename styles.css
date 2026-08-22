@@ -99,9 +99,12 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .project-visual figcaption { width: min(100%, 760px); margin: 7px auto 0; color: var(--muted); font-size: 12px; }
 .project-media-grid { display: grid; gap: 18px; padding: 20px 26px 24px; border-top: 1px solid var(--line); background: #fbfcfe; }
 .project-media-grid-two { grid-template-columns: minmax(180px, .58fr) minmax(0, 1fr); }
+.project-media-grid-four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .project-media-grid .project-visual { padding: 0; border-top: 0; }
+.project-media-grid .project-visual a { display: block; }
 .project-media-grid .project-visual img,
 .project-media-grid .project-visual video { width: 100%; height: var(--media-height); }
+.project-media-grid-four .project-visual img { height: 220px; object-fit: contain; }
 .project-media-grid .project-visual.portrait img { object-fit: contain; }
 .project-media-grid figcaption { width: 100%; }
 
@@ -258,6 +261,7 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
   .certificate-gallery { grid-template-columns: repeat(2, 1fr); }
   .evidence-heading { grid-template-columns: 150px 190px 1fr; }
   .evidence-row { grid-template-columns: 48px 170px minmax(0, 1fr) 24px; gap: 12px; }
+  .project-media-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 680px) {
