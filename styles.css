@@ -104,7 +104,8 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .project-media-grid .project-visual a { display: block; }
 .project-media-grid .project-visual img,
 .project-media-grid .project-visual video { width: 100%; height: var(--media-height); }
-.project-media-grid-four .project-visual img { height: 220px; object-fit: contain; }
+.project-media-grid-four .project-visual img,
+.project-media-grid-four .project-visual video { height: 220px; object-fit: contain; }
 .project-media-grid .project-visual.portrait img { object-fit: contain; }
 .project-media-grid figcaption { width: 100%; }
 
