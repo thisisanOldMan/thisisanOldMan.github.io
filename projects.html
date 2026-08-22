@@ -3,115 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="東森購物、好奇兄弟、會議諸葛、智慧旅遊、仁愛醫院與台鐵規格協作。">
+  <meta name="description" content="LLM 結構化資料管線、Realtime Agent、LightRAG 知識檢索與 GenAI 自動化工作流專案。">
   <meta name="theme-color" content="#ffffff">
-  <title>專案經歷｜賴績智 Ji-Zhi Lai</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>LLM／Agent 專案｜賴績智 Ji-Zhi Lai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
 <body id="top" data-page="projects">
   <a class="skip-link" href="#main">跳至主要內容</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">賴績智 <span>Ji-Zhi Lai</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav" aria-label="履歷分類">
-        <a href="index.html" data-page="home">首頁</a>
-        <a href="skills.html" data-page="skills">核心能力</a>
-        <a href="projects.html" data-page="projects" aria-current="page">專案成果</a>
-        <a href="thesis.html" data-page="thesis">碩士論文</a>
-        <a href="experience.html" data-page="experience">教學與經歷</a>
-        <a href="competitions.html" data-page="competitions">競賽與提案</a>
-        <a class="pdf-link" href="賴績智_履歷_0963671837.pdf" download="賴績智_履歷_0963671837.pdf">PDF 履歷</a>
-      </nav>
-    </div>
-  </header>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html">賴績智 <span>Ji-Zhi Lai</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="履歷分類"><a href="index.html" data-page="home">首頁</a><a href="skills.html" data-page="skills">核心能力</a><a href="projects.html" data-page="projects" aria-current="page">LLM／Agent 專案</a><a href="thesis.html" data-page="thesis">研究方法</a><a href="experience.html" data-page="experience">教學與技術傳播</a><a href="competitions.html" data-page="competitions">競賽與提案</a><a class="pdf-link" href="賴績智_履歷_LLM_AI_Agent.pdf" download>PDF 履歷</a></nav>
+  </div></header>
+
   <main id="main">
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="container">
-        <p>履歷分類</p>
-        <h1 id="page-title">專案成果</h1>
-        <div>五個代表專案以使用情境、關鍵方法、效益與本人貢獻呈現。</div>
-      </div>
-    </section>
-    <section id="projects" class="section section-muted">
-      <div class="container">
-        <div class="section-title"><p>02</p><h2>核心專案</h2></div>
+    <section class="page-hero" aria-labelledby="page-title"><div class="container"><p>02 / SELECTED WORK</p><h1 id="page-title">LLM／Agent 專案</h1><div>三項完整實作，呈現資料契約、Agent 工具流程與可追溯 RAG 服務的設計及驗證能力。</div></div></section>
+    <section class="section section-muted"><div class="container">
+      <div class="section-title"><p>02.1</p><h2>代表案例</h2></div>
 
-        <article class="project-card">
-          <header><p>2025–2026｜企業合作</p><h3>東森購物｜大型語言模型（LLM）客戶輪廓（Persona）分析系統</h3></header>
-          <p class="project-lead">將原本散落在長篇客服與銷售對話中的顧客需求、偏好、消費習慣及互動變化，自動整理成可持續更新的客戶輪廓，讓客服與行銷人員不必逐篇閱讀，也能快速掌握顧客狀態。</p>
-          <p class="flow"><strong>使用流程</strong>　匯入客服／銷售對話 → AI 擷取並合併顧客資訊 → 取得客戶輪廓與 Excel 報表</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>以提示詞工程（Prompt Engineering）將欄位定義、判斷條件、衝突處理與輸出格式寫入提示模板，驅動大型語言模型執行結構化資訊擷取；以 13 類、56 欄 Persona Schema 作為資料契約，透過增量合併更新既有輪廓，並以 JSON 驗證、解析修復與 429 重試建立容錯層。</p></div>
-            <div><h4>企業效益</h4><p>預估可將長篇對話的初次整理時間縮短約 98–99%，讓客服與行銷人員由逐篇閱讀、手動填表，改為覆核可持續更新的客戶輪廓。依單筆約 2 萬中文字測試，模型處理需 30–50 秒、費用約 NT$2.20；估算基準為人工整理 60–90 分鐘，未含人工覆核與修正。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>設計客戶輪廓擷取演算法、欄位規格與增量更新邏輯，完成批次後端及 JSON／Excel 輸出；前端由團隊成員負責。</p></div>
-          </div>
-          <figure class="project-visual"><img src="assets/eastern-customer-persona.png" alt="東森購物客戶輪廓資料表輸出畫面"><figcaption>使用者輪廓成果：將長篇對話整理為固定欄位並保留資料更新時間。</figcaption></figure>
-        </article>
-
-        <article class="project-card">
-          <header><p>2025｜產學合作</p><h3>好奇兄弟雲端｜AI 行銷影片流程自動化平台</h3></header>
-          <p class="project-lead">商家透過 LINE 提交廣告素材，系統以自動化互動流程依序完成文案、旁白、字幕與影片生成，並支援預覽、修改及重新產生，降低中小型商家製作廣告影片的技術門檻與跨工具操作成本。</p>
-          <p class="flow"><strong>使用流程</strong>　LINE 提交商品素材 → AI 產生文案、旁白與影片 → 商家預覽、修改或重新生成 → 完成交付</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>以 n8n 建立事件驅動的工作流與狀態機，由 LINE Webhook 接收素材，再以提示詞工程產出符合商品與活動情境的文案，串接文字轉語音（TTS）及影片生成服務。長任務採非同步等待與輪詢，使用 user／batch／item 識別碼追蹤 processing／ready／failed，搭配重試、續跑與 Human-in-the-loop（人工確認）控制品質。</p></div>
-            <div><h4>企業效益</h4><p>預估可減少約 60–80% 的重複廣告製作工時，每月釋放約 36–80 人時，並讓商家透過 LINE 完成素材提交、生成、修改與交付，降低跨工具操作及人工交接成本。估算基準為每月 20 支、每支 3–5 小時並保留 20–40% 人工審稿；未含模型、語音、影片服務費與額外重製。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>主導需求拆解、核心 n8n 工作流與狀態機設計；整合生成服務、等待／輪詢、錯誤分支、人工確認，以及資料列權限控管，讓不同使用者的素材與任務彼此隔離。</p></div>
-          </div>
-          <div class="project-media-grid project-media-grid-two" aria-label="好奇兄弟使用者介面與生成影片">
-            <figure class="project-visual portrait"><img src="assets/good-brothers-user-interface.jpg" alt="商家在 LINE 上操作 AI 行銷影片生成服務"><figcaption>使用者介面：商家從 LINE 上傳素材並取得完成通知。</figcaption></figure>
-            <figure class="project-visual"><video controls preload="metadata" playsinline aria-label="AI 生成的日式豬排漢堡廣告影片"><source src="assets/good-brothers-ad-pork-burger.mp4" type="video/mp4">瀏覽器不支援影片播放。</video><figcaption>生成成果：日式豬排漢堡廣告影片。</figcaption></figure>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <header><p>2025｜研究型系統</p><h3>會議諸葛｜多代理人（Multi-Agent）智慧會議助理</h3></header>
-          <p class="project-lead">讓 AI 不只是被動記錄會議，而是由多個具不同職責的 AI 代理人共同理解討論內容、查找所需知識、提出工具建議並判斷是否發言；會後再保留逐字稿與待辦，成為可參與會議的協作成員。</p>
-          <p class="flow"><strong>使用流程</strong>　進行即時語音會議 → 多個 AI 代理人依職責理解與判斷 → 保存逐字稿、任務及追蹤資訊</p>
-          <div class="project-grid">
-            <div><h4>關鍵方法</h4><p>建立 Multi-Agent Orchestration（多代理人協作編排）核心，將會議情境理解、知識需求、工具建議與發言判斷拆成不同角色，透過共享對話狀態維持跨回合脈絡；需要外部知識或工具時，以 RAG／Function Calling 介面產生查詢或建議事件，並整合 Realtime／WebRTC、音訊佇列、連線狀態及錯誤處理。</p></div>
-            <div><h4>企業效益</h4><p>預估可減少約 50–70% 的會後重複整理作業，每場節省約 15–42 分鐘；若每月 40 場，約可釋放 10–28 人時，並降低逐字稿、待辦與責任歸屬散落在不同工具的風險。估算基準為每場人工整理 30–60 分鐘，且系統產出可作為會後初稿。</p></div>
-            <div class="wide"><h4>我的貢獻</h4><p>建立多代理人核心框架，定義角色、共享對話狀態與協作介面；整合即時語音、逐字稿、Webhook 事件、任務狀態及會議資料持久化。</p></div>
-          </div>
-          <figure class="project-visual"><img src="assets/meeting-zhuge-user-interface.png" alt="會議諸葛智慧會議助理儀表板"><figcaption>使用者介面：集中呈現會議脈絡、任務進度、提醒與追蹤資訊。</figcaption></figure>
-        </article>
-      </div>
-    </section>
-
-    <section id="additional-projects" class="section section-muted">
-      <div class="container">
-        <div class="section-title"><p>02.2</p><h2>延伸專案</h2></div>
-        <div class="compact-projects">
-          <article>
-            <p class="kicker">2026｜智慧旅遊產學提案</p>
-            <h3>AI 代理人驅動的知識檢索行程服務（Agentic RAG）</h3>
-            <p>旅客只需用日常語言說出想去的地點、時間、偏好與限制，系統便會主動補問缺少條件、搜尋旅遊知識與即時資訊，產生可持續修改的個人化行程。</p>
-            <p><strong>關鍵方法：</strong>建立 Intent-driven Agentic RAG 決策迴圈：先以意圖辨識（Intent Classification）判斷任務，再以填槽（Slot Filling）補齊日期、地點與偏好；檢索層結合 BM25 關鍵字搜尋、語意向量檢索與知識圖譜，並以證據充分度決定回答、補問、切換資料來源或重新檢索，最後透過提示詞工程生成可追溯且可修改的行程。</p>
-            <p><strong>企業效益：</strong>預估可減少約 50–70% 的重複旅遊資料查找時間，每次行程規劃縮短約 30–84 分鐘，並讓使用者在同一段對話中補充條件、重新搜尋與持續修改行程。估算基準為原流程需跨 3–5 個來源、花費 60–120 分鐘查找與整理。</p>
-            <p><strong>我的貢獻：</strong>負責意圖驅動的知識檢索、資料融合、回應生成及驗測架構。</p>
-          </article>
-          <article>
-            <p class="kicker">2025｜仁愛醫院合作研究</p>
-            <h3>肝癌存活模型評估</h3>
-            <p>為醫療研究建立可重複的肝癌存活風險分析流程，以相同標準比較傳統統計、集成與深度學習模型，並解釋哪些特徵可能影響判斷。</p>
-            <p><strong>關鍵方法：</strong>建立一致的 Survival Analysis Pipeline（存活分析流程），共用資料前處理、切分與評估介面，比較 CoxPH、Random Survival Forest、Gradient Boosted Cox、DeepSurv 與 LogisticHazard；以 C-index、Kaplan–Meier 與個案存活曲線檢視模型表現，再以 SHAP 解釋特徵影響。</p>
-            <p><strong>研究效益：</strong>將五類模型原本可能各自重建的評估框架，收斂為一套共用 Pipeline；以「五套框架降為一套」計算，重複框架建置項目理論上減少 80%。此比例不代表整體研究工時，模型特有的調參、驗證與分析仍需分別進行。</p>
-            <p><strong>我的貢獻：</strong>負責資料前處理、五類模型建置、驗證及結果分析。</p>
-          </article>
-          <article class="full-width">
-            <p class="kicker">產業規格協作</p>
-            <h3>台鐵／世曦工程｜鐵道 AI 招標規範</h3>
-            <p>協助世曦工程將台鐵場域的語音辨識、專有名詞校正與技術文件問答需求，轉化為可供招標及廠商評選使用的功能與技術規格；依不同查詢情境規劃關鍵字搜尋、語意檢索與知識圖譜（建立資料關聯）等處理方式。</p>
-          </article>
+      <article id="persona" class="project-card featured-project">
+        <header><div><p>2025–2026｜企業合作</p><h3>大型語言模型客戶輪廓分析系統</h3></div><span class="status-label">LLM SOLUTION</span></header>
+        <p class="project-lead">將分散於長篇客服與銷售對話中的需求、偏好及互動訊號，轉為具明確資料契約與持續更新機制的客戶輪廓。</p>
+        <p class="flow"><strong>FLOW</strong>　對話資料 → Schema 設計 → LLM 結構化擷取 → 驗證修復 → 增量更新與批次輸出</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>負責 Persona 資料模型與後端資料流設計，建立結構化擷取、輸出驗證、異常修復、增量合併及批次輸出流程。</p></div>
+          <div><h4>關鍵決策</h4><p>以統一資料契約與 Provider Adapter 隔離模型供應商差異，使擷取、驗證與更新邏輯不依賴單一模型端點。</p></div>
+          <div><h4>技術</h4><p>Python、Prompt Engineering、JSON Schema、Provider Adapter、pandas。</p></div>
+          <div><h4>工程驗證</h4><p>完成單筆約 2 萬中文字的結構化擷取與輸出驗證，涵蓋解析、修復、增量合併及 JSON／Excel 交付流程。</p></div>
         </div>
+        <div class="synthetic-console" role="img" aria-label="合成 Persona 資料管線示意，展示對話輸入、欄位擷取與輪廓更新">
+          <div class="console-top"><span>ILLUSTRATIVE PERSONA PIPELINE</span><span>schema example</span></div>
+          <div class="console-body">
+            <div class="conversation-snippet"><p>synthetic-sample-01</p><strong>「偏好低糖、週末到貨，最近開始為家人比較保健品。」</strong><span>zh-TW · structured extraction</span></div>
+            <div class="console-arrow" aria-hidden="true">→</div>
+            <div class="persona-fields"><p>profile.update</p><dl><div><dt>preference</dt><dd>低糖</dd></div><div><dt>delivery_window</dt><dd>週末</dd></div><div><dt>intent</dt><dd>家庭保健比較</dd></div><div><dt>source_turn</dt><dd>sample-01</dd></div></dl></div>
+          </div>
+        </div>
+      </article>
+
+      <article id="meeting-agent" class="project-card">
+        <header><div><p>2025｜研究型系統</p><h3>會議諸葛｜Realtime Agent 與任務事件流程</h3></div><span class="status-label">AGENT WORKFLOW</span></header>
+        <p class="project-lead">建構即時會議 Agent 的語音脈絡、工具呼叫與任務狀態流程，使模型判斷能進一步驅動可保存、可追蹤的系統事件。</p>
+        <p class="flow"><strong>FLOW</strong>　語音脈絡 → Realtime Agent → Function Calling → Webhook／任務事件</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>負責 Realtime Agent 與工具契約整合，串接 WebRTC、Function Calling、Webhook、會議資料及任務狀態。</p></div>
+          <div><h4>關鍵決策</h4><p>以結構化事件作為模型與應用系統的整合邊界，使即時互動、工具執行與會後任務共用一致狀態。</p></div>
+          <div><h4>技術</h4><p>TypeScript、React、Realtime／WebRTC、Function Calling、Webhook。</p></div>
+          <div><h4>系統成果</h4><p>整合即時逐字稿、工具呼叫、待辦、提醒與任務狀態，使會中事件能延續為會後可追蹤的工作項目。</p></div>
+        </div>
+        <figure class="project-visual"><img src="assets/meeting-zhuge-user-interface.png" alt="會議諸葛即時會議助理介面"><figcaption>即時會議介面：集中呈現會議脈絡、任務進度、提醒與追蹤資訊。</figcaption></figure>
+      </article>
+
+      <article id="lightrag" class="project-card">
+        <header><div><p>2025–2026｜開源專案客製</p><h3>LightRAG 可追溯知識問答服務</h3></div><span class="status-label">RAG / KNOWLEDGE GRAPH</span></header>
+        <p class="project-lead">基於 HKUDS／LightRAG 客製知識問答流程，整合多路檢索、知識圖譜與來源追溯，使回答能回傳實體、關係及原文片段。</p>
+        <p class="flow"><strong>FLOW</strong>　文件處理與索引 → 檢索（向量／圖譜／Hybrid） → 回答生成與來源追溯 → Graph Search</p>
+        <div class="project-grid">
+          <div><h4>我的責任</h4><p>負責查詢 API、來源追溯、Graph Search、檢索設定、繁中 WebUI 與本機服務環境的客製及整合。</p></div>
+          <div><h4>關鍵決策</h4><p>保留 upstream RAG 核心與 bindings，將客製範圍集中於來源追溯、檢索設定、查詢 API 與使用介面，保留後續升級路徑。</p></div>
+          <div><h4>技術</h4><p>Python、LightRAG、NetworkX、RESTful API、React、知識圖譜、檢索（向量／圖譜／Hybrid）。</p></div>
+          <div><h4>實機驗證</h4><p>完成本機 Server／WebUI 啟動、知識圖譜載入、節點關係呈現與查詢流程檢查；公開畫面使用 16 節點、18 關係的合成資料。</p></div>
+        </div>
+        <figure class="project-visual graph-visual"><img src="assets/lightrag-knowledge-graph.png" alt="LightRAG 專案執行後的知識圖譜介面，以合成架構資料呈現節點與關係"><figcaption>實機畫面｜LightRAG WebUI 知識圖譜；公開版以合成架構資料生成。</figcaption></figure>
+      </article>
+    </div></section>
+
+    <section class="section"><div class="container">
+      <div class="section-title"><p>02.2</p><h2>延伸案例</h2></div>
+      <div class="extended-evidence">
+        <article id="genai-workflow" class="evidence-case full-width workflow-case">
+          <div class="case-heading"><span>GENAI AUTOMATION</span><h3>好奇兄弟雲端｜AI 行銷影片流程自動化平台</h3></div>
+          <p><strong>專案目的：</strong>讓商家直接在 LINE 提交商品素材，將文案、旁白、字幕與影片生成整合為可預覽、修正及重新生成的單一流程。</p>
+          <p><strong>核心做法：</strong>以 n8n 編排 LINE Webhook 觸發的生成工作流，串接 LLM、TTS 與影片生成服務；透過非同步任務、狀態追蹤及人工確認管理生成與交付。</p>
+          <div class="compact-tech">n8n · LINE Messaging API · LLM · TTS · 影片生成 API · Supabase · 非同步任務編排 · Human-in-the-loop</div>
+          <p><strong>應用價值：</strong>將素材提交、內容生成、修改與交付收斂於 LINE，降低跨工具操作與人工交接成本。</p>
+          <p><strong>負責範圍：</strong>主導需求拆解、工作流與狀態模型設計，整合生成服務、異常處理、人工確認及使用者／任務資料隔離。</p>
+          <div class="project-media-grid project-media-grid-two" aria-label="行銷影片工作流介面與生成成果">
+            <figure class="project-visual portrait"><img src="assets/good-brothers-user-interface.jpg" alt="商家在 LINE 上操作 AI 行銷影片生成服務"><figcaption>LINE 使用介面</figcaption></figure>
+            <figure class="project-visual"><video controls preload="metadata" playsinline aria-label="AI 生成的日式豬排漢堡廣告影片"><source src="assets/good-brothers-ad-pork-burger.mp4" type="video/mp4">瀏覽器不支援影片播放。</video><figcaption>生成影片成果</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="evidence-case">
+          <div class="case-heading"><span>RESEARCH PROTOTYPE</span><h3>COMPASS｜多回合對話策略決策框架</h3></div>
+          <p><strong>研究目的：</strong>評估候選對話策略對後續狀態與終局結果的影響，避免只依單輪回應選擇下一步策略。</p>
+          <p><strong>核心做法：</strong>將策略選擇建模為有限視界決策問題，結合狀態轉移預測與成功／失敗路徑成本，比較候選策略的多步對話路徑。</p>
+          <div class="compact-tech">有限視界決策 · 狀態轉移預測 · 路徑成本分析 · LLM 對話模擬</div>
+          <p><strong>研究結果：</strong>在 CraigslistBargain 與 GPT‑3.5 的固定模擬設定下，成功率為 74.86%，成功對話平均 4.858 輪。</p>
+          <p><strong>負責範圍：</strong>提出決策方法，完成演算法實作、基準方案、實驗設計與結果分析。</p>
+          <a class="inline-link" href="thesis.html">閱讀研究方法 →</a>
+        </article>
+        <article class="evidence-case">
+          <div class="case-heading"><span>AGENTIC RAG PROPOSAL</span><h3>意圖驅動智慧旅遊｜Agentic RAG 架構提案</h3></div>
+          <p><strong>專案目的：</strong>將地點、時間、偏好與限制等自然語言需求，轉換為可補問、可查證且能持續調整的個人化行程。</p>
+          <p><strong>核心做法：</strong>以意圖辨識、Slot Filling 與檢索路由建立 Agentic RAG 決策迴圈，依查詢需求與證據充分度決定回答、補問、切換檢索來源或重新檢索。</p>
+          <div class="compact-tech">Agentic RAG · 意圖辨識 · Slot Filling · 檢索（BM25／向量／Hybrid）· 知識圖譜 · 檢索路由</div>
+          <p><strong>應用價值：</strong>將條件補齊、跨來源檢索與行程調整整合於同一段對話，降低反覆查找及手動整理負擔。</p>
+          <p><strong>負責範圍：</strong>規劃意圖驅動的檢索流程、檢索路由、多來源資料融合、回應生成與評估流程。</p>
+        </article>
+        <article class="evidence-case">
+          <div class="case-heading"><span>MODEL EVALUATION</span><h3>仁愛醫院合作｜肝癌存活風險建模與比較</h3></div>
+          <p><strong>研究目的：</strong>建立可重複的肝癌存活分析流程，以一致的資料切分與評估標準比較統計、集成與深度學習模型。</p>
+          <p><strong>核心做法：</strong>比較五種存活模型；以 C-index 評估風險排序能力，搭配 Kaplan–Meier、個案存活曲線與 SHAP 分析群體趨勢、個別風險及特徵貢獻。</p>
+          <div class="compact-tech">Survival Analysis · CoxPH · Random Survival Forest · Gradient Boosted Cox · DeepSurv · LogisticHazard · C-index · Kaplan–Meier · SHAP</div>
+          <p><strong>研究價值：</strong>讓五種模型共用一致的資料處理、切分與評估介面，提升跨模型比較的一致性。</p>
+          <p><strong>負責範圍：</strong>負責資料前處理、五種模型建置、驗證、結果比較及模型解釋分析。</p>
+        </article>
+        <article class="evidence-case">
+          <div class="case-heading"><span>SPECIFICATION</span><h3>台鐵／世曦工程｜鐵道 AI 招標規格協作</h3></div>
+          <p><strong>專案目的：</strong>將語音辨識、鐵道術語校正與技術文件問答需求，轉化為可供招標、方案比較及驗收的 AI 系統規格。</p>
+          <p><strong>核心做法：</strong>將方案拆為語音辨識與領域術語校正、技術文件檢索問答兩條能力鏈，並定義資料範圍、系統邊界及驗收方式。</p>
+          <div class="compact-tech">ASR · 領域術語校正 · RAG · 檢索（關鍵字／向量）· 知識圖譜</div>
+          <p><strong>交付價值：</strong>形成涵蓋功能需求、技術方案、資料條件與判定基準的招標及評選規格。</p>
+          <p><strong>負責範圍：</strong>負責場域需求轉譯、檢索方案設計、功能規格與驗收條件整理。</p>
+        </article>
       </div>
-    </section>
+    </div></section>
   </main>
-  <div class="page-end"><div class="container"><a class="back-to-top" href="#top">返回履歷導覽 <span aria-hidden="true">↑</span></a></div></div>
+  <div class="page-end"><div class="container"><a class="back-to-top" href="#top">返回頁首 <span aria-hidden="true">↑</span></a></div></div>
   <footer class="site-footer"><div class="container">© 2026 Ji-Zhi Lai</div></footer>
 </body>
 </html>
