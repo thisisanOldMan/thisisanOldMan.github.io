@@ -78,6 +78,7 @@ h1 span { display: block; margin-top: 4px; color: var(--muted); font-size: 20px;
 .tool-note { margin: 14px 0 0; font-size: 14px; }
 
 .project-card { margin-bottom: 22px; border: 1px solid var(--line); background: var(--white); }
+.project-card[id], .evidence-case[id] { scroll-margin-top: calc(var(--header) + 20px); }
 .project-card:last-child { margin-bottom: 0; }
 .project-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 24px 26px 0; }
 .project-card header p, .kicker { margin-bottom: 3px; color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
