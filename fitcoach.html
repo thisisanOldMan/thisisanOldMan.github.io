@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FitCoach AI 是一套依健身程度與問題難度自動分派專科教練，並以開發者玻璃箱呈現 Agent 決策的 production 級 AI 健身教練系統。">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>FitCoach AI｜AI 健身教練｜賴績智 Ji-Zhi Lai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top" class="fitcoach-page" data-page="fitcoach">
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">賴績智 <span>Ji-Zhi Lai</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="履歷分類">
+        <a href="index.html" data-page="home">首頁</a>
+        <a href="skills.html" data-page="skills">核心能力</a>
+        <a href="fitcoach.html" data-page="fitcoach" aria-current="page">個人作品</a>
+        <a href="projects.html" data-page="projects">LLM／Agent 專案</a>
+        <a href="thesis.html" data-page="thesis">研究方法</a>
+        <a href="experience.html" data-page="experience">教學與輔導</a>
+        <a href="competitions.html" data-page="competitions">競賽與提案</a>
+        <a class="pdf-link" href="賴績智_履歷_LLM_AI_Agent.pdf" download>PDF 履歷</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="fitcoach-hero" aria-labelledby="fitcoach-title">
+      <div class="container fitcoach-hero-grid">
+        <div class="fitcoach-hero-copy">
+          <p class="fitcoach-kicker">PERSONAL PROJECT · LIVE PRODUCTION DEMO</p>
+          <h1 id="fitcoach-title">FitCoach AI <span>AI 健身教練</span></h1>
+          <p class="fitcoach-lead">依健身程度與問題難度，自動分派入門、中階、進階專科教練；讓使用者從熱量計算、課表規劃到訓練紀錄，都能在同一套服務中完成。</p>
+          <p class="fitcoach-thesis">以確定性流程守住數字、連結、授權與資料寫入；把語意理解、任務判斷與教練協作交給 Agent。</p>
+          <div class="fitcoach-actions">
+            <a class="primary-button fitcoach-live-button" href="https://fitcoach-demo-lai.zeabur.app/" target="_blank" rel="noopener">開啟線上 Demo <span aria-hidden="true">↗</span></a>
+            <a class="text-button" href="#architecture">閱讀系統架構 <span aria-hidden="true">↓</span></a>
+          </div>
+          <dl class="fitcoach-metrics" aria-label="FitCoach AI 專案摘要">
+            <div><dt>3</dt><dd>專科教練</dd></div>
+            <div><dt>2</dt><dd>MCP 來源</dd></div>
+            <div><dt>7</dt><dd>端到端驗收情境</dd></div>
+            <div><dt>$0.50</dt><dd>全程評估預算上限</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fitcoach-service" aria-labelledby="service-title">
+      <div class="container">
+          <div class="section-title"><p>01</p><h2 id="service-title">功能與服務</h2></div>
+        <p class="fitcoach-section-intro">不是只有聊天介面，而是一套能理解問題、選擇教練、調用工具並完成健身任務的服務。</p>
+        <div class="fitcoach-service-grid">
+          <article><span>01</span><h3>AI 教練對話</h3><p>依程度與問題難度分派專科教練，提供符合當下需求的訓練與飲食建議。</p></article>
+          <article><span>02</span><h3>熱量與飲食判定</h3><p>以程式計算 TDEE 等精確數字，再由教練說明如何落實於日常飲食。</p></article>
+          <article><span>03</span><h3>課表規劃</h3><p>把目標、程度與時間條件轉為可執行課表，並保留修改與確認流程。</p></article>
+          <article><span>04</span><h3>訓練紀錄</h3><p>寫入前由使用者確認，避免誤記；以可靠交易保存每一次訓練成果。</p></article>
+          <article><span>05</span><h3>動作與教學影片</h3><p>查詢專業知識並嵌入對應教學影片，讓建議能直接連到下一步行動。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section-muted fitcoach-architecture" aria-labelledby="architecture-title">
+      <div class="container">
+          <div class="section-title"><p>02</p><h2 id="architecture-title">系統流程與架構</h2></div>
+        <blockquote class="fitcoach-principle">精確的數字、連結、授權與寫入交給 code；語意判斷與任務協作交給 LLM。能確定性完成，就不額外呼叫模型。</blockquote>
+        <div class="fitcoach-flow" role="group" aria-label="FitCoach AI 任務處理流程">
+          <div><span>01</span><strong>使用者意圖</strong><small>問題、程度與操作情境</small></div>
+          <i aria-hidden="true">→</i>
+          <div><span>02</span><strong>三層任務路由</strong><small>Deterministic → LLM → Rule</small></div>
+          <i aria-hidden="true">→</i>
+          <div><span>03</span><strong>教練與模型路由</strong><small>依難度選教練與模型</small></div>
+          <i aria-hidden="true">→</i>
+          <div><span>04</span><strong>工具與 MCP</strong><small>資料、影片、計算與寫入</small></div>
+          <i aria-hidden="true">→</i>
+          <div><span>05</span><strong>可信輸出</strong><small>Grounding、確認與追蹤</small></div>
+        </div>
+        <div class="fitcoach-engineering-grid">
+          <article><p>MULTI-AGENT ROUTING</p><h3>任務、模型與教練協作</h3><span>先以確定性條件處理明確任務，再由 LLM 補足語意判斷，最後以規則提供可靠 fallback；同時依難度選擇模型與專科教練。</span></article>
+          <article><p>MCP TOOL LAYER</p><h3>自建與第三方工具可攜</h3><span>自建 fitness-data MCP（stdio）並整合 YouTube MCP，將健身資料、教學影片與工具能力跨 Agent 共用。</span></article>
+          <article><p>LAYERED MEMORY</p><h3>短期脈絡與長期偏好並存</h3><span>以 LangGraph checkpointer 保存短期狀態與滾動摘要；Store 同時保存結構化資料與語意向量記憶。</span></article>
+          <article><p>SAFE WRITES</p><h3>讓修改可確認、可重試</h3><span>三層 Guardrail、Human-in-the-Loop、Idempotency、Transaction 與 session 身分檢查，共同保護資料寫入。</span></article>
+          <article><p>OBSERVABILITY</p><h3>路由、工具、成本都有依據</h3><span>追蹤模型、工具、cache 與成本；以可重跑 Evals 驗證關鍵情境，並設定全程成本預算。</span></article>
+          <article><p>RELIABILITY</p><h3>可部署、可降級、可驗收</h3><span>FastAPI、React 與 Docker 完成雲端服務，透過 fallback 與七題端到端情境驗證實際流程。</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fitcoach-glassbox" aria-labelledby="glassbox-title">
+      <div class="container fitcoach-glassbox-grid">
+        <div>
+          <div class="section-title"><p>03</p><h2 id="glassbox-title">開發者玻璃箱</h2></div>
+          <p class="fitcoach-section-intro">把 Agent 的內部決策變成可觀察資訊，而不是只看到最後一句回答。 <a class="inline-link" href="https://fitcoach-demo-lai.zeabur.app/" target="_blank" rel="noopener">親自開啟開發者模式 <span aria-hidden="true">↗</span></a></p>
+          <ul class="fitcoach-checklist">
+            <li><strong>路由透明：</strong>看見任務被分派給哪位教練與哪個模型。</li>
+            <li><strong>工具透明：</strong>確認實際調用了哪些工具與 MCP 能力。</li>
+            <li><strong>成本透明：</strong>呈現 token、cache 與單次請求成本。</li>
+            <li><strong>身分可測：</strong>切換 Demo Free／Premium 情境，驗證授權邊界。</li>
+          </ul>
+        </div>
+        <div class="fitcoach-glassbox-visuals">
+          <figure>
+            <img src="assets/fitcoach-home-overview.png" alt="FitCoach AI 首頁，提供 AI 教練對話、熱量計算、課表、訓練紀錄、動作庫與飲食判定入口" width="1918" height="1078">
+            <figcaption>作品首頁：從日常健身需求進入各項功能與 AI 教練服務。</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/fitcoach-glassbox-overview.png" alt="FitCoach AI 開發者模式與玻璃箱完整畫面，呈現測試身分、功能入口、執行狀態、Token、成本與探索細節" width="1918" height="1036">
+            <figcaption>開發者模式與玻璃箱：在同一畫面檢視測試身分、功能入口與 Agent 執行資訊。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted fitcoach-stack-section" aria-labelledby="stack-title">
+      <div class="container">
+        <div class="section-title"><p>04</p><h2 id="stack-title">工程技術版圖</h2></div>
+        <div class="fitcoach-stack">
+          <div><h3>應用框架</h3><p>LangGraph · LangChain · OpenAI Agents SDK</p></div>
+          <div><h3>模型與資料</h3><p>OpenRouter · 多模型 Routing · Embedding · Qdrant · SQLite</p></div>
+          <div><h3>Agent 架構</h3><p>Multi-Agent · ReAct · Planning／Plan-and-Execute · Reflection · Structured Output · Dynamic Tool Selection · Agent Skills</p></div>
+          <div><h3>工具與知識</h3><p>Tool／Function Calling · MCP（自建＋第三方）· RAG · fitness-data MCP · YouTube MCP</p></div>
+          <div><h3>Production</h3><p>Guardrails · Human-in-the-Loop · Idempotency · Transaction · Authorization · Prompt Cache · Tracing／Observability · Evals · Reliability／Fallback · Cost Budget</p></div>
+          <div><h3>部署</h3><p>Docker · Zeabur · stdio MCP</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fitcoach-cta" aria-labelledby="demo-title">
+      <div class="container fitcoach-cta-grid">
+        <div><p>LIVE PROJECT</p><h2 id="demo-title">直接體驗 FitCoach AI</h2><span>從一般模式感受服務，再切換開發模式查看 Agent 的執行資訊。</span></div>
+        <a href="https://fitcoach-demo-lai.zeabur.app/" target="_blank" rel="noopener">前往 FitCoach AI <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">© 2026 Ji-Zhi Lai</div></footer>
+</body>
+</html>
